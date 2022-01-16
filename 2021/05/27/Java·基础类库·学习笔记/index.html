@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="CharSequence接口 现在只要有字符串就可以为CharSequence实例化，CharSequence本身是一个接口，在该接口中有如下方法： 获取指定索引的字符：public char charAt​(int index)；获取字符串长度：public int length​()；截取部分字符串：public CharSequence subSequence​(int start, int">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java·基础类库">
+<meta property="og:url" content="http://example.com/2021/05/27/Java%C2%B7%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="SOMETHING">
+<meta property="og:description" content="CharSequence接口 现在只要有字符串就可以为CharSequence实例化，CharSequence本身是一个接口，在该接口中有如下方法： 获取指定索引的字符：public char charAt​(int index)；获取字符串长度：public int length​()；截取部分字符串：public CharSequence subSequence​(int start, int">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527211705949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527211526283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021052721353298.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527213850259.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527215548684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527215700554.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527215848769.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527220042939.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021052722154773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527223133173.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527225202120.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210527225658911.png">
+<meta property="article:published_time" content="2021-05-27T15:01:25.000Z">
+<meta property="article:modified_time" content="2021-06-03T02:14:19.896Z">
+<meta property="article:author" content="AHawkeye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210527211705949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
+
+
+<link rel="canonical" href="http://example.com/2021/05/27/Java%C2%B7%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;05&#x2F;27&#x2F;Java%C2%B7%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;27&#x2F;Java·基础类库·学习笔记&#x2F;&quot;,&quot;title&quot;:&quot;Java·基础类库&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Java·基础类库 | SOMETHING</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SOMETHING</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CharSequence%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">CharSequence接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AutoCloseable%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.</span> <span class="nav-text">AutoCloseable接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Runtime%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">Runtime类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#System%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">System类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cleaner%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">Cleaner类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86"><span class="nav-number">6.</span> <span class="nav-text">对象克隆</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">AHawkeye</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Java%C2%B7%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="AHawkeye">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SOMETHING">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java·基础类库
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-27 23:01:25" itemprop="dateCreated datePublished" datetime="2021-05-27T23:01:25+08:00">2021-05-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-03 10:14:19" itemprop="dateModified" datetime="2021-06-03T10:14:19+08:00">2021-06-03</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="CharSequence接口"><a href="#CharSequence接口" class="headerlink" title="CharSequence接口"></a>CharSequence接口</h1><p><img src="https://img-blog.csdnimg.cn/20210527211705949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210527211526283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在只要有字符串就可以为CharSequence实例化，CharSequence本身是一个接口，在该接口中有如下方法：</p>
+<p><strong>获取指定索引的字符：public char charAt​(int index)；<br>获取字符串长度：public int length​()；<br>截取部分字符串：public CharSequence subSequence​(int start, int end)；</strong></p>
+<h1 id="AutoCloseable接口"><a href="#AutoCloseable接口" class="headerlink" title="AutoCloseable接口"></a>AutoCloseable接口</h1><p>AutoCloseable接口主要是用于日后进行资源开发的处理上，以实现资源的自动关闭（释放）。例如以后文件，网络，数据库开发之中，由于服务器资源有限，所以使用之后一定要释放资源，资源才可以被更多的使用者使用。<br>这个接口是JDK1.7提供的，并且只有一个方法：close。</p>
+<p><code>java public void close() throws Exception </code></p>
+<p>AutoCloseable接口位于java.lang包下，从JDK1.7开始引入。</p>
+<p>1.在1.7之前，我们通过try{} finally{} 在finally中释放资源。</p>
+<p>在finally中关闭资源存在以下问题：<br>1、自己要手动写代码做关闭的逻辑；<br>2、有时候还会忘记关闭一些资源；<br>3、关闭代码的逻辑比较冗长，不应该是正常的业务逻辑需要关注的；</p>
+<p>2.对于实现AutoCloseable接口的类的实例，将其放到try后面（我们称之为：带资源的try语句），在try结束的时候，会自动将这些资源关闭（调用close方法）。</p>
+<p>带资源的try语句的3个关键点：<br><strong>1、由带资源的try语句管理的资源必须是实现了AutoCloseable接口的类的对象。</strong><br>2、在try代码中声明的资源被隐式声明为final。**<br>3、通过使用分号分隔每个声明可以管理多个资源。</p>
+<p><strong>没实现该接口，要手动close：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">IMessage</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Message</span> <span class="keyword">implements</span> <span class="title">IMessage</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">open</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;[OPEN]连接成功&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Message</span><span class="params">(String msg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.open()) &#123;</span><br><span class="line">            <span class="keyword">this</span>.msg = msg;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;[CLOSE]关闭资源&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;发送消息:&quot;</span>+msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Message m = <span class="keyword">new</span> Message(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">        m.send();</span><br><span class="line">        m.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2021052721353298.png" alt="在这里插入图片描述"><br><strong>实现了该接口，就不用手动关闭了</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">IMessage</span> <span class="keyword">extends</span> <span class="title">AutoCloseable</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Message</span> <span class="keyword">implements</span> <span class="title">IMessage</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">open</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;[OPEN]连接成功&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Message</span><span class="params">(String msg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.open()) &#123;</span><br><span class="line">            <span class="keyword">this</span>.msg = msg;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;[CLOSE]关闭资源&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;发送消息:&quot;</span>+msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>(IMessage m = <span class="keyword">new</span> Message(<span class="string">&quot;Hello&quot;</span>))&#123;</span><br><span class="line">           m.send();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210527213850259.png" alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>(IMessage m = <span class="keyword">new</span> Message(<span class="string">&quot;Hello&quot;</span>))&#123;</span><br><span class="line">           m.send();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>这里try-with-resources是jdk1.7引入的语法糖，使得关闭资源操作无需层层嵌套在finally。</strong><br><strong>由带资源的try语句管理的资源必须是实现了AutoCloseable接口的类的对象，而且实现了AutoCloseable的对象要想自动关闭，必须try-with-resources</strong></p>
+<h1 id="Runtime类"><a href="#Runtime类" class="headerlink" title="Runtime类"></a>Runtime类</h1><p>Runtime描述的是运行时得到状态，也就是说在整个的JVM之中，Runtime类是唯一一个与JVM运行状态有关的类，并且都会more恩提供一个该类的实例化对象。<br>由于在每一个JVM进程里只允许有一个Runtime类对象，所以这个类的构造方法为private，则为单例设计模式，则一定有一个static的get方法获得本类实例。<br><img src="https://img-blog.csdnimg.cn/20210527215548684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210527215700554.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210527215848769.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210527220042939.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Runtime runtime = Runtime.getRuntime();</span><br><span class="line">        System.out.println(<span class="string">&quot;Java虚拟机中的空闲内存量(G):&quot;</span>+runtime.freeMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机试图使用的最大内存量(G):&quot;</span>+ runtime.maxMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机中的内存总量(G):&quot;</span>+ runtime.totalMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Java虚拟机中的空闲内存量(G):0.24523233622312546<br>Java 虚拟机试图使用的最大内存量(G):3.953125<br>Java 虚拟机中的内存总量(G):0.248046875</p>
+</blockquote>
+<p><strong>max默认大致为本机内存的四分之一。total默认为六十四分之一。</strong></p>
+<p>我们用一个String产生一些垃圾，再进行gc回收看看效果。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Runtime runtime = Runtime.getRuntime();</span><br><span class="line">        System.out.println(<span class="string">&quot;Java虚拟机中的空闲内存量(G):&quot;</span>+runtime.freeMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机试图使用的最大内存量(G):&quot;</span>+ runtime.maxMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机中的内存总量(G):&quot;</span>+ runtime.totalMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        String s = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">            s += <span class="string">&quot;i&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;=========================================&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Java虚拟机中的空闲内存量(G):&quot;</span>+runtime.freeMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机试图使用的最大内存量(G):&quot;</span>+ runtime.maxMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机中的内存总量(G):&quot;</span>+ runtime.totalMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        runtime.gc();</span><br><span class="line">        System.out.println(<span class="string">&quot;=========================================&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Java虚拟机中的空闲内存量(G):&quot;</span>+runtime.freeMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机试图使用的最大内存量(G):&quot;</span>+ runtime.maxMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Java 虚拟机中的内存总量(G):&quot;</span>+ runtime.totalMemory()/Math.pow(<span class="number">1024</span>,<span class="number">3</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2021052722154773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>GC垃圾收集器，是可以系统自动调用的垃圾释放功能，或者使用Runtime中的gc手动调用。</strong></p>
+<h1 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h1><p><strong>currentTimeMillis和gc方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">300000</span>; i++) &#123;</span><br><span class="line">            s+=<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">        System.out.println((end - start)/<span class="number">1000.0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>4.115</p>
+</blockquote>
+<p>产生这些垃圾 耗时4.115s。</p>
+<p>而System中的gc方法，实际上就是调用<code>Runtime.getRuntime().gc()</code>。<code>java.lang.System.gc()</code>只是<code>java.lang.Runtime.getRuntime().gc()</code>的简写，两者的行为没有任何不同。</p>
+<h1 id="Cleaner类"><a href="#Cleaner类" class="headerlink" title="Cleaner类"></a>Cleaner类</h1><p>Cleaner是JDK1.9后提供的对象清理操作，主要功能是方法<code>finalize()</code>的替代。<br>Java没有析构函数，垃圾自动回收。但是Java还是提供了给用户收尾的过程。每一个实例化对象在回收之前做一些处理。最初实现这些的方法，是Object类中的finalize方法。但是已经从1.9 deprecated了，不建议继续使用这个方法了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;【构造】对象创建&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;【回收】对象一定要死&quot;</span>);</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;还要再活五百年&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Test t = <span class="keyword">new</span> Test();<span class="comment">//诞生</span></span><br><span class="line">        t = <span class="keyword">null</span>;<span class="comment">//成为垃圾</span></span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210527223133173.png" alt="在这里插入图片描述"><br><strong>抛出的异常，并没有用。</strong><br>从JDK1.9开始，已经不建议使用了，对象的释放。建议使用<code>AutoCloseable</code>和<code>java.lang.ref.Cleaner</code>。<br><code>java.lang.ref.Cleaner</code>也支持有<code>AutoCloseable</code>处理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.ref.Cleaner;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;【构造】对象创建&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;【回收】对象一定要死&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Clean</span> <span class="keyword">implements</span> <span class="title">AutoCloseable</span></span>&#123;<span class="comment">//实现清除</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Cleaner CLEANER = Cleaner.create();<span class="comment">//创建清除处理</span></span><br><span class="line">    <span class="keyword">private</span> Test t;</span><br><span class="line">    <span class="keyword">private</span> Cleaner.Cleanable cleanable;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Clean</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.t = <span class="keyword">new</span> Test();<span class="comment">//创建对象</span></span><br><span class="line">        <span class="keyword">this</span>.cleanable = <span class="keyword">this</span>.CLEANER.register(<span class="keyword">this</span>,<span class="keyword">this</span>.t);<span class="comment">//注册使用的对象</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cleanable.clean();<span class="comment">//启动多线程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>(Clean c = <span class="keyword">new</span> Clean())&#123;</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>可以成为新时代的finalize。新一代的清除回收，更多情况下考虑多线程的使用。<strong>为了防止有可能造成的延迟处理（如果第一个程序没有<code>System.gc()</code>;则处理会有延迟，不会输出【回收】一句）</strong>，所以许多对象回收前的处理，都是单独通过一个线程完成的，保证执行性能的提高。<br>创建一个实现Runnable的类A-&gt;创建一个实现AutoCloseable接口的清除类B-&gt;利用create静态方法声明一个Cleaner对象c，声明一个A的对象引用a，声明一个Cleaner.Cleanable对象d，B的构造器中对A的对象a赋值实例，同时用c的register方法把a注册进去-&gt;重写的close方法执行d的clean方法。</p>
+<h1 id="对象克隆"><a href="#对象克隆" class="headerlink" title="对象克隆"></a>对象克隆</h1><p>Object类：<img src="https://img-blog.csdnimg.cn/20210527225202120.png" alt="在这里插入图片描述"><br>所以所有的类都有clone方法，但不是所有类都希望被克隆。所以要想实现对象克隆，就要实现一个接口Cloneable，此接口并没有任何方法是因为它描述一种能力。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Member</span> <span class="keyword">implements</span>  <span class="title">Cloneable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Member</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.toString()+<span class="string">&quot;Member&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> Object <span class="title">clone</span><span class="params">()</span> <span class="keyword">throws</span> CloneNotSupportedException </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.clone();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> CloneNotSupportedException </span>&#123;</span><br><span class="line">        Member A = <span class="keyword">new</span> Member(<span class="string">&quot;hawkeye&quot;</span>,<span class="number">20</span>);</span><br><span class="line">        Member B = (Member)A.clone();</span><br><span class="line">        System.out.println(A);</span><br><span class="line">        System.out.println(B);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210527225658911.png" alt="在这里插入图片描述"><br>注意clone方法是protected，要覆写才能用。实际上开发中很少用对象克隆，注意要克隆就要实现Cloneable能力接口就好，以及clone方法返回Object类型，注意类型转换，还有覆写clone方法。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/23/%E8%B0%88Java%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" rel="prev" title="谈Java的参数传递">
+                  <i class="fa fa-chevron-left"></i> 谈Java的参数传递
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/29/Java%C2%B7%E5%B8%B8%E7%94%A8%E7%B1%BB%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="Java·常用类">
+                  Java·常用类 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AHawkeye</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
