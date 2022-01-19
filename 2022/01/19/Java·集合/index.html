@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="List接口存储有序的、可重复的数据，可当成动态数组，有三个实现类：  ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储 LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高 Vector(JDK1.0)：作为List接口(JDK1.2)的古老实现类，线程安全，效率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java·集合">
+<meta property="og:url" content="http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/index.html">
+<meta property="og:site_name" content="SOMETHING">
+<meta property="og:description" content="List接口存储有序的、可重复的数据，可当成动态数组，有三个实现类：  ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储 LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高 Vector(JDK1.0)：作为List接口(JDK1.2)的古老实现类，线程安全，效率">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118160303082.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161038925.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161906491.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118162315734.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164046490.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164525257.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119153456075.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154258469.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163910807.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154751678.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154507806.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154556019.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119161813893.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162034050.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162344281.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162438190.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162453389.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163640916.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163844759.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164453922.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164736925.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164802403.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164650013.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165222242.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165410740.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165629368.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165700997.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165726576.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165920145.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170040288.png">
+<meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170134182.png">
+<meta property="article:published_time" content="2022-01-19T09:09:42.000Z">
+<meta property="article:modified_time" content="2022-01-19T09:10:18.789Z">
+<meta property="article:author" content="AHawkeye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png">
+
+
+<link rel="canonical" href="http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;01&#x2F;19&#x2F;Java%C2%B7%E9%9B%86%E5%90%88&#x2F;&quot;,&quot;path&quot;:&quot;2022&#x2F;01&#x2F;19&#x2F;Java·集合&#x2F;&quot;,&quot;title&quot;:&quot;Java·集合&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Java·集合 | SOMETHING</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SOMETHING</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#List%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">List接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">ArrayList源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jdk7"><span class="nav-number">2.1.</span> <span class="nav-text">jdk7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#add"><span class="nav-number">2.1.2.</span> <span class="nav-text">add</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jdk8"><span class="nav-number">2.2.</span> <span class="nav-text">jdk8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">2.3.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">2.4.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">LinkedList源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8-1"><span class="nav-number">3.1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-1"><span class="nav-number">3.2.</span> <span class="nav-text">add</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">Set接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E6%80%A7%E5%92%8C%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E6%80%A7"><span class="nav-number">4.1.</span> <span class="nav-text">无序性和不可重复性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">4.2.</span> <span class="nav-text">添加元素的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EhashCode%E5%92%8Cequals"><span class="nav-number">4.3.</span> <span class="nav-text">关于hashCode和equals</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E6%B1%82"><span class="nav-number">4.3.1.</span> <span class="nav-text">要求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedHashSet"><span class="nav-number">4.4.</span> <span class="nav-text">LinkedHashSet</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TreeSet"><span class="nav-number">5.</span> <span class="nav-text">TreeSet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">5.1.</span> <span class="nav-text">自然排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">5.2.</span> <span class="nav-text">定制排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set%E7%BB%83%E4%B9%A0"><span class="nav-number">6.</span> <span class="nav-text">Set练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">6.1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">6.2.</span> <span class="nav-text">2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-number">6.2.1.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-number">6.2.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">6.2.3.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map%E6%8E%A5%E5%8F%A3"><span class="nav-number">7.</span> <span class="nav-text">Map接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Map%E7%BB%93%E6%9E%84%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">7.1.</span> <span class="nav-text">Map结构的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#key"><span class="nav-number">7.1.1.</span> <span class="nav-text">key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value"><span class="nav-number">7.1.2.</span> <span class="nav-text">value</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entry"><span class="nav-number">7.1.3.</span> <span class="nav-text">Entry</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">7.2.</span> <span class="nav-text">面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%88%E8%A7%81%E4%B8%8B%EF%BC%89"><span class="nav-number">7.2.1.</span> <span class="nav-text">HashMap的底层实现原理（见下）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap%E5%92%8CHashtable%E7%9A%84%E5%BC%82%E5%90%8C%EF%BC%88%E8%A7%81%E4%B8%8A%EF%BC%89"><span class="nav-number">7.2.2.</span> <span class="nav-text">HashMap和Hashtable的异同（见上）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CurrentHashMap%E4%B8%8EHashtable%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">7.2.3.</span> <span class="nav-text">CurrentHashMap与Hashtable的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK7%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">8.</span> <span class="nav-text">HashMap在JDK7下的底层实现原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK8%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">9.</span> <span class="nav-text">HashMap在JDK8下的底层实现原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK7%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">10.</span> <span class="nav-text">HashMap在JDK7下的底层源码分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK8%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">11.</span> <span class="nav-text">HashMap在JDK8下的底层源码分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedHashMap%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">LinkedHashMap底层实现原理（了解）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%8D%E8%B0%88HashSet"><span class="nav-number">13.</span> <span class="nav-text">再谈HashSet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TreeMap"><span class="nav-number">14.</span> <span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Properties"><span class="nav-number">15.</span> <span class="nav-text">Properties</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collections%E7%B1%BB"><span class="nav-number">16.</span> <span class="nav-text">Collections类</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">AHawkeye</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="AHawkeye">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SOMETHING">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java·集合
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-01-19 17:09:42 / Modified: 17:10:18" itemprop="dateCreated datePublished" datetime="2022-01-19T17:09:42+08:00">2022-01-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h1><p>存储有序的、可重复的数据，可当成动态数组，有三个实现类：</p>
+<ul>
+<li>ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储</li>
+<li>LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高</li>
+<li>Vector(JDK1.0)：作为List接口(JDK1.2)的古老实现类，线程安全，效率低，底层使用Object[]存储</li>
+</ul>
+<p>面试题 三个类的异同：</p>
+<ul>
+<li>三个类都实现了List接口，存储有序的，可重复的数据。</li>
+<li>不同点见上。</li>
+</ul>
+<h1 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h1><h2 id="jdk7"><a href="#jdk7" class="headerlink" title="jdk7"></a>jdk7</h2><h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p><code>ArrayList()</code></p>
+<p>底层创建了长度为10的Object数组elementData</p>
+<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><p>如果容量足够，就数组直接赋值，如果不够，需要扩容，默认情况下扩容为原来的1.5倍，同时需要将原有数组中的数据复制到新的数组中</p>
+<p>所以开发中尽量使用<code>ArrayList(int capacity)</code>构造器</p>
+<h2 id="jdk8"><a href="#jdk8" class="headerlink" title="jdk8"></a>jdk8</h2><p>elementData初始化为{}，并没有创建长度</p>
+<p>第一次调用add时，底层才创建了长度10的数组，后续添加和扩容与jdk7无异</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>jdk7中的ArrayList的对象的创建类似于单例模式的饿汉式，而jdk8中的对象创建类似于单例模式的懒汉式，延迟了数组的创建，节省内存。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>重载了两个remove方法</p>
+<p><code>remove(int index)</code></p>
+<p>参数说明：index：要先移除的元素的索引。</p>
+<p><code>remove(Object o)</code></p>
+<p>参数说明：o：要先移除的元素。</p>
+<h1 id="LinkedList源码分析"><a href="#LinkedList源码分析" class="headerlink" title="LinkedList源码分析"></a>LinkedList源码分析</h1><h2 id="构造器-1"><a href="#构造器-1" class="headerlink" title="构造器"></a>构造器</h2><p><code>LinkedList()</code></p>
+<p>内部声明了Node类型的first和last属性，默认为null</p>
+<h2 id="add-1"><a href="#add-1" class="headerlink" title="add"></a>add</h2><p>将值封装进Node中，创建Node对象</p>
+<p>其中Node定义为，双向链表</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png" alt="image-20220117203913420"></p>
+<h1 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h1><p>存储无序的，不可重复的数据</p>
+<ul>
+<li>HashSet：作为Set接口的主要实现类，线程不安全的，可以存储NULL</li>
+<li>LinkedHashSet：作为HashSet的子类，遍历其内部数据时，可以按照添加顺序遍历</li>
+<li>TreeSet：可以按照添加对象的指定属性进行排序</li>
+</ul>
+<h2 id="无序性和不可重复性"><a href="#无序性和不可重复性" class="headerlink" title="无序性和不可重复性"></a>无序性和不可重复性</h2><ul>
+<li>无序性：不等于随机性，存储的数据在底层数组中并非按照数组索引的顺序添加，而是根据数据的Hash值决定的。</li>
+<li>不可重复性：保证添加的元素按照equals()判断时，不能返回true，即相同的元素只能添加一个。</li>
+</ul>
+<h2 id="添加元素的过程"><a href="#添加元素的过程" class="headerlink" title="添加元素的过程"></a>添加元素的过程</h2><p>以HashSet为例：<strong>数组+链表</strong></p>
+<p>我们向HashSet中添加元素a，首先调用元素a所在类的hashCode方法，计算元素a的哈希值，此哈希值接着通过某种算法计算出在HashSet底层数组中的存放位置，判断数组此位置上是否已经有元素：</p>
+<p>​    |—–如果此位置没有其他元素，则a直接添加成功——–&gt;情况1</p>
+<p>​    |—–如果有其他元素b（或已经存在以链表形式存在的多个元素），则比较a和b的hash值</p>
+<p>​            （注意存放位置相同不一定hash值相同）：</p>
+<p>​        |—–如果hash值不相同，则元素a添加成功——–&gt;情况2</p>
+<p>​        |—–如果hash值不相同，进而需要调用元素a的equals方法：</p>
+<p>​            |—–如果false，则添加成功——–&gt;情况3</p>
+<p>​            |—–如果true，则添加失败</p>
+<p>对于情况2和3，元素a与已经存在指定索引位置上的数据以链表的方式存储。在jdk7中，元素a放到数组中，指向原来的元素，在jdk8中，原来的元素在数组中，指向元素a，总结为七上八下。</p>
+<h2 id="关于hashCode和equals"><a href="#关于hashCode和equals" class="headerlink" title="关于hashCode和equals"></a>关于hashCode和equals</h2><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118160303082.png" alt="image-20220118160303082"></p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul>
+<li>向Set中添加的数据，其所在的类，一定要重写hashCode和euqals方法。</li>
+<li>重写的hashCode和equals方法，尽量保证一致性。即相等的对象一定要有相同的散列码。</li>
+</ul>
+<h2 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h2><p>作为HashSet的子类，在添加数据的同时，每个数据还维护了两个引用，记录此数据前一个数据和后一个数据，对于比较频繁的遍历操作，使用LinkedHashSet效率更高。但是消耗空间。</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161038925.png" alt="image-20220118161038925"></p>
+<h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161906491.png" alt="image-20220118161906491"></p>
+<ul>
+<li><p>向TreeSet中添加的数据，要求是相同类的对象。</p>
+</li>
+<li><p>两种排序方式：自然排序（Comparable）和定制排序（Comparator）</p>
+</li>
+</ul>
+<h2 id="自然排序"><a href="#自然排序" class="headerlink" title="自然排序"></a>自然排序</h2><p>自然排序中，比较两个对象是否相同的标准为：compareTo方法返回0</p>
+<p>TreeSet比较特殊，判断相同不在使用euqals方法，而是使用（重写的）compareTo方法。</p>
+<h2 id="定制排序"><a href="#定制排序" class="headerlink" title="定制排序"></a>定制排序</h2><p>在定制排序中，比较两个对象是否相同的标准为：compare方法返回0</p>
+<p>Comparator放入TreeSet构造器。</p>
+<h1 id="Set练习"><a href="#Set练习" class="headerlink" title="Set练习"></a>Set练习</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118162315734.png" alt="image-20220118162315734"></p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>Person.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> id,String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        Person person = (Person) o;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (id != person.id) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> name != <span class="keyword">null</span> ? name.equals(person.name) : person.name == <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = id;</span><br><span class="line">        result = <span class="number">31</span> * result + (name != <span class="keyword">null</span> ? name.hashCode() : <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Test.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person(<span class="number">1001</span>,<span class="string">&quot;AA&quot;</span>);</span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person(<span class="number">1002</span>,<span class="string">&quot;BB&quot;</span>);</span><br><span class="line">        Set&lt;Person&gt; s = <span class="keyword">new</span> HashSet&lt;Person&gt;();</span><br><span class="line">        s.add(p1);</span><br><span class="line">        s.add(p2);</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        p1.name = <span class="string">&quot;CC&quot;</span>;</span><br><span class="line">        s.remove(p1);</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        s.add(<span class="keyword">new</span> Person(<span class="number">1001</span>,<span class="string">&quot;CC&quot;</span>));</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        s.add(<span class="keyword">new</span> Person(<span class="number">1001</span>,<span class="string">&quot;AA&quot;</span>));</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164046490.png" alt="image-20220118164046490"></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>1.首先放入了p1和p2</p>
+<p>2.然后把p1的name改为CC，但是存储位置没变。</p>
+<p>3.然后删除p1，此时根据p1的id为1001和name为CC算出hash值，肯定与最初根据1001和AA算出的hash值不同，根据新的name算出的hash值在数组中找，是空的，所以判定p1不存在，不作删除操作，所以还是打印两个元素。</p>
+<p>4.然后添加1001和CC的一个人，类比第三步，根据这两个属性算出来的hash值，在数组中是空的，添加进去，所以打印出三个元素，其中有两个Person都是1001和CC。</p>
+<p>5.最后添加属性为1001和AA的人，算出hash值后，发现这个位置有冲突，然后再比较equals，发现一个name是CC，一个name是AA，然后继续添加进去，链表链上。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>尽量不要修改已经在Set中的对象的属性。</p>
+<h1 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h1><p>和Collection接口并列</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164525257.png" alt="image-20220118164525257"></p>
+<ul>
+<li><p>HashMap（JDK1.2）：是Map的主要实现类，线程不安全，效率高，可以存储null的key和value。底层是数组+链表（jdk7及之前）或数组+链表+红黑树（jdk8及之后）。</p>
+</li>
+<li><p>Hashtable（JDK1.0）：是Map（JDK1.2）的古老实现类，线程安全，效率低，不可以存储null的key和value</p>
+</li>
+<li><p>TreeMap（JDK1.2）：保证按照添加的key-value进行排序，实现排序遍历，按照key来自然排序或定制排序。底层属于红黑树。</p>
+</li>
+<li><p>LinkedHashMap（JDK1.4）：HashMap的子类。保证遍历Map元素时，可以按照添加元素顺序实现遍历，原因是在原有基础上添加了一对引用表明添加的先后顺序，前一个和后一个元素。对于频繁的遍历操作，效率更高。</p>
+</li>
+<li><p>Properties常用来处理配置文件，是Hashtable的子类，key和value都是String类型。</p>
+</li>
+</ul>
+<h2 id="Map结构的理解"><a href="#Map结构的理解" class="headerlink" title="Map结构的理解"></a>Map结构的理解</h2><h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><p>无序的，不可重复的，使用Set存储所有的key。</p>
+<p>HashMap下，key所在的类要重写euqals和hashCode方法。</p>
+<h3 id="value"><a href="#value" class="headerlink" title="value"></a>value</h3><p>无序的，可重复的，使用Collection存储所有的value。</p>
+<p>value所在的类要重写equals方法。因为hashCode主要是存的时候效率高。</p>
+<h3 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h3><p>一个key-value构成一个Entry对象。</p>
+<p>无序的，不可重复的，使用Set存储所有的Entry。</p>
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><h3 id="HashMap的底层实现原理（见下）"><a href="#HashMap的底层实现原理（见下）" class="headerlink" title="HashMap的底层实现原理（见下）"></a>HashMap的底层实现原理（见下）</h3><h3 id="HashMap和Hashtable的异同（见上）"><a href="#HashMap和Hashtable的异同（见上）" class="headerlink" title="HashMap和Hashtable的异同（见上）"></a>HashMap和Hashtable的异同（见上）</h3><h3 id="CurrentHashMap与Hashtable的区别"><a href="#CurrentHashMap与Hashtable的区别" class="headerlink" title="CurrentHashMap与Hashtable的区别"></a>CurrentHashMap与Hashtable的区别</h3><ol>
+<li>底层数据结构： JDK1.7的 ConcurrentHashMap 底层采用 分段的数组+链表 实现，JDK1.8 采用的数据结构跟HashMap1.8的结构一样，数组+链表/红黑二叉树。Hashtable 和 JDK1.8 之前的 HashMap 的底层数据结构类似都是采用 数组+链表 的形式，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的；</li>
+<li>实现线程安全的方式（重要）： ① 在JDK1.7的时候，ConcurrentHashMap（分段锁） 对整个桶数组进行了分割分段(Segment)，每一把锁只锁容器其中一部分数据，多线程访问容器里不同数据段的数据，就不会存在锁竞争，提高并发访问率。（默认分配16个Segment，比Hashtable效率提高16倍。） 到了 JDK1.8 的时候已经摒弃了Segment的概念，而是直接用 Node 数组+链表+红黑树的数据结构来实现，并发控制使用 synchronized 和 CAS 来操作。（JDK1.6以后 对 synchronized锁做了很多优化） 整个看起来就像是优化过且线程安全的 HashMap，虽然在JDK1.8中还能看到 Segment 的数据结构，但是已经简化了属性，只是为了兼容旧版本；② Hashtable(同一把锁) :使用 synchronized 来保证线程安全，效率非常低下。当一个线程访问同步方法时，其他线程也访问同步方法，可能会进入阻塞或轮询状态，如使用 put 添加元素，另一个线程不能使用 put 添加元素，也不能使用 get，竞争会越来越激烈效率越低。</li>
+</ol>
+<h1 id="HashMap在JDK7下的底层实现原理"><a href="#HashMap在JDK7下的底层实现原理" class="headerlink" title="HashMap在JDK7下的底层实现原理"></a>HashMap在JDK7下的底层实现原理</h1><p><code>HashMap map = new HashMap()</code></p>
+<p>在实例化以后，底层创建了长度是16的一维数组Entry[] table。</p>
+<p>…可能已经执行过多次put操作…</p>
+<p><code>map.put(key1,value1)</code></p>
+<p>首先，调用key1所在类的hashCode方法计算key1的哈希值，此哈希值经过某种算法计算以后，得到在Entry数组中的存放位置。</p>
+<p>|—–如果此位置上数据为空，此时的key1-value1添加成功——情况1</p>
+<p>|—–如果此位置上数据不为空，意味着此位置上存在一个或多个数据（以链表方式存在），比较key1和已经存在的一个或多个数据的哈希值（注意存放位置相同不一定hash值相同）：</p>
+<p>​    |—–如果与已经存在的数据的哈希值都不相同，则key1-value1添加成功——情况2</p>
+<p>​    |—–若和存在的某一个数据的哈希值相同，则调用key1所在类的equals方法比较</p>
+<p>​        |—–若返回false，则添加成功——情况3</p>
+<p>​        |—–若返回true，则用value1替换原来的value。</p>
+<p>对于情况2和3，此时key1和value1和原来的数据以链表的形式存储。</p>
+<p>在不断地添加过程中，会涉及到扩容的问题，当超出临界值时且要存放的位置非空时（看源码），默认的扩容方式是，扩容为原来容量的2倍，并将原来的数据复制过来。</p>
+<h1 id="HashMap在JDK8下的底层实现原理"><a href="#HashMap在JDK8下的底层实现原理" class="headerlink" title="HashMap在JDK8下的底层实现原理"></a>HashMap在JDK8下的底层实现原理</h1><p>相较于jdk 7底层实现方面的不同：</p>
+<ol>
+<li><p>new HashMap()：底层没有创建一个长度为16的数组</p>
+</li>
+<li><p>jdk 8底层的数组是Node[]，而非Entry[]</p>
+</li>
+<li><p>首次调用put方法时，底层创建长度为16的数组</p>
+</li>
+<li><p>jdk 7底层结构只有数组+链表，jdk 8底层结构是数组+链表+红黑树。当数组的某一个索引位置上的元素以链表形式存在的数据个数 &gt; 8 且当前数组的长度  &gt;  64时，此时此索引位置上的所有数据改为使用红黑树存储。</p>
+</li>
+</ol>
+<h1 id="HashMap在JDK7下的底层源码分析"><a href="#HashMap在JDK7下的底层源码分析" class="headerlink" title="HashMap在JDK7下的底层源码分析"></a>HashMap在JDK7下的底层源码分析</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119153456075.png" alt="image-20220119153456075"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154258469.png" alt="image-20220119154258469"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163910807.png" alt="image-20220119163910807"></p>
+<p>threshold = capacity * loadfactor</p>
+<p>若容量是16，因子是0.75，则阈值为12.则数组在装12个的时候就进行扩容了，而不是全装满扩容，因为你是根据哈希算出来的数组存放位置索引，所以很可能有些位置一直空着。所以搞出一个阈值来保证及时扩容。提前扩容，也是为了让链表结构尽可能的少，所以加载因子可以自己设定，小一些，但是也要兼顾数组利用率，所以0.75最合适。</p>
+<p>put方法下，通过右移，异或操作先算hash值</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154751678.png" alt="image-20220119154751678"></p>
+<p>可以看到这里put，如果存在一个key，则替换后返回oldValue。</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154507806.png" alt="image-20220119154507806"></p>
+<p>可以看到算出hash后用indexFor方法得到存放索引，可以看到是与方法，所以长度为2的幂的原因是只有当length是2的幂的时候，模length和与length-1相同。</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154556019.png" alt="image-20220119154556019"></p>
+<p>addEntry方法 可以看到超过阈值和要放的地方非空 resize扩容两倍</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119161813893.png" alt="image-20220119161813893"></p>
+<p>最后添加链表元素</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162034050.png" alt="image-20220119162034050"></p>
+<p>七上八下，新造一个对象，他的next指向原来数组上存的元素，然后新造的对象存入数组，就是链表的头插法。</p>
+<h1 id="HashMap在JDK8下的底层源码分析"><a href="#HashMap在JDK8下的底层源码分析" class="headerlink" title="HashMap在JDK8下的底层源码分析"></a>HashMap在JDK8下的底层源码分析</h1><p>首先声明对象时 底层构造器并没有创建数组，只是赋值加载因子</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162344281.png" alt="image-20220119162344281"></p>
+<p>其次Node本质上还是一个Entry</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162438190.png" alt="image-20220119162438190"></p>
+<p>然后是put方法</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162453389.png" alt="image-20220119162453389"></p>
+<p>重点是putVal</p>
+<p>首次put，就造好Node类型数组。</p>
+<p>如果不考虑红黑树，逻辑与jdk7的区别就是尾插。</p>
+<p>当某一链表元素超过8（TREEIFY_THRESHOLD）时，变成树结构</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163640916.png" alt="image-20220119163640916"></p>
+<p>而且在方法内部，当数组长度小于64，只是resize扩容，也不变树结构</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163844759.png" alt="image-20220119163844759"></p>
+<h1 id="LinkedHashMap底层实现原理（了解）"><a href="#LinkedHashMap底层实现原理（了解）" class="headerlink" title="LinkedHashMap底层实现原理（了解）"></a>LinkedHashMap底层实现原理（了解）</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164453922.png" alt="image-20220119164453922"></p>
+<h1 id="再谈HashSet"><a href="#再谈HashSet" class="headerlink" title="再谈HashSet"></a>再谈HashSet</h1><p>从构造器看，new一个HashSet，其实就是new出HashMap</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164736925.png" alt="image-20220119164736925"></p>
+<p>往set中add元素，就是往map里放元素，放入key</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164802403.png" alt="image-20220119164802403"></p>
+<p>其value对应一个PRESENT，不声明为null，避免或许会有的空指针异常。其实是一个空的Object类，没有实际意义，所以声明为静态的，就这一个，对每一个key都指向这一个value，节省空间。</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164650013.png" alt="image-20220119164650013"></p>
+<h1 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h1><ul>
+<li><p>向TreeMap中添加的数据key-value，要求key是相同类的对象。</p>
+</li>
+<li><p>两种排序方式：自然排序（Comparable）和定制排序（Comparator）</p>
+</li>
+</ul>
+<p>注意自然排序就是让key的类实现Comparable接口</p>
+<p>定制排序，将Comparator放入TreeMap的构造器</p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165222242.png" alt="image-20220119165222242"></p>
+<h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165410740.png" alt="image-20220119165410740"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165629368.png" alt="image-20220119165629368"></p>
+<h1 id="Collections类"><a href="#Collections类" class="headerlink" title="Collections类"></a>Collections类</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165700997.png" alt="image-20220119165700997"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165726576.png" alt="image-20220119165726576"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165920145.png" alt="image-20220119165920145"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170040288.png" alt="image-20220119170040288"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170134182.png" alt="image-20220119170134182"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/16/VueBlog/" rel="prev" title="VueBlog开发笔记">
+                  <i class="fa fa-chevron-left"></i> VueBlog开发笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AHawkeye</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
