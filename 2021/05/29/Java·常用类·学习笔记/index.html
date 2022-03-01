@@ -1,32 +1,28 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="Math类提供数学计算公式。被声明为final，构造器私有化，所有方法都是static的。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="AHawkeye">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Math类提供数学计算公式。被声明为final，构造器私有化，所有方法都是static的。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java·常用类">
 <meta property="og:url" content="http://example.com/2021/05/29/Java%C2%B7%E5%B8%B8%E7%94%A8%E7%B1%BB%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="SOMETHING">
 <meta property="og:description" content="Math类提供数学计算公式。被声明为final，构造器私有化，所有方法都是static的。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2021052911560042.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210529124701577.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2021052913340486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70">
@@ -56,301 +52,666 @@
 <meta property="article:published_time" content="2021-05-29T08:39:29.000Z">
 <meta property="article:modified_time" content="2021-06-03T02:14:24.975Z">
 <meta property="article:author" content="AHawkeye">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/2021052911560042.png">
+  
+  
+  <title>Java·常用类 - SOMETHING</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="http://example.com/2021/05/29/Java%C2%B7%E5%B8%B8%E7%94%A8%E7%B1%BB%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;05&#x2F;29&#x2F;Java%C2%B7%E5%B8%B8%E7%94%A8%E7%B1%BB%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;29&#x2F;Java·常用类·学习笔记&#x2F;&quot;,&quot;title&quot;:&quot;Java·常用类&quot;}</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Java·常用类 | SOMETHING</title><script src="/js/config.js"></script>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-    </div>
-  </div>
 
-  <div class="site-meta">
+<body>
+  
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">SOMETHING</h1>
-      <i class="logo-line"></i>
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-
-
-
-
-
-
-</div>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
       </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Math%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">Math类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Random%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">Random类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BigInteger%E5%92%8CBigDecimal"><span class="nav-number">3.</span> <span class="nav-text">BigInteger和BigDecimal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Date"><span class="nav-number">4.</span> <span class="nav-text">Date</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SimpleDateFormat"><span class="nav-number">5.</span> <span class="nav-text">SimpleDateFormat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Calendar"><span class="nav-number">6.</span> <span class="nav-text">Calendar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK8%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9FAPI"><span class="nav-number">7.</span> <span class="nav-text">JDK8中的时间日期API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DateTimeFormatter"><span class="nav-number">8.</span> <span class="nav-text">DateTimeFormatter</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">AHawkeye</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
+  </div>
+</nav>
 
+  
 
-    </header>
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Java·常用类"></span>
+          
+        </div>
 
+        
+          
+  <div class="mt-3">
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-05-29 16:39" pubdate>
+          2021年5月29日 下午
+        </time>
+      </span>
+    
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/29/Java%C2%B7%E5%B8%B8%E7%94%A8%E7%B1%BB%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="AHawkeye">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SOMETHING">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Java·常用类
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.2k 字
+        
       </span>
-      <span class="post-meta-item-text">Posted on</span>
+    
 
-      <time title="Created: 2021-05-29 16:39:29" itemprop="dateCreated datePublished" datetime="2021-05-29T16:39:29+08:00">2021-05-29</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-03 10:14:24" itemprop="dateModified" datetime="2021-06-03T10:14:24+08:00">2021-06-03</time>
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          68 分钟
+        
       </span>
+    
 
-  
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
 </div>
 
-        </div>
-      </header>
+</div>
 
+  </header>
+
+  <main>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h1><p>提供数学计算公式。被声明为final，构造器私有化，所有方法都是static的。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MathDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">        System.out.println(Math.E);<span class="comment">//比任何其他值都更接近 e（即自然对数的底数）的 double 值。</span></span><br><span class="line">        System.out.println(Math.PI);<span class="comment">//比任何其他值都更接近 pi（即圆的周长与直径之比）的 double 值。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 1.abs绝对值函数</span></span><br><span class="line"><span class="comment">         * 对各种数据类型求绝对值</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.abs(-<span class="number">10</span>));<span class="comment">//输出10</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 2.三角函数与反三角函数</span></span><br><span class="line"><span class="comment">         * cos求余弦</span></span><br><span class="line"><span class="comment">         * sin求正弦</span></span><br><span class="line"><span class="comment">         * tan求正切</span></span><br><span class="line"><span class="comment">         * acos求反余弦</span></span><br><span class="line"><span class="comment">         * asin求反正弦</span></span><br><span class="line"><span class="comment">         * atan求反正切</span></span><br><span class="line"><span class="comment">         * atan2(y,x)求向量(x,y)与x轴夹角</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.acos(-<span class="number">1.0</span>));<span class="comment">//输出圆周率3.14...</span></span><br><span class="line">        System.out.println(Math.atan2(<span class="number">1.0</span>, <span class="number">1.0</span>));<span class="comment">//输出 π/4 的小数值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 3.开根号</span></span><br><span class="line"><span class="comment">         * cbrt(x)开立方</span></span><br><span class="line"><span class="comment">         * sqrt(x)开平方</span></span><br><span class="line"><span class="comment">         * hypot(x,y)求sqrt(x*x+y*y)在求两点间距离时有用sqrt((x1-x2)^2+(y1-y2)^2)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.sqrt(<span class="number">4.0</span>));<span class="comment">//输出2.0</span></span><br><span class="line">        System.out.println(Math.cbrt(<span class="number">8.0</span>));<span class="comment">//输出2.0</span></span><br><span class="line">        System.out.println(Math.hypot(<span class="number">3.0</span>, <span class="number">4.0</span>));<span class="comment">//输出5.0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 4.最值</span></span><br><span class="line"><span class="comment">         * max(a,b)求最大值</span></span><br><span class="line"><span class="comment">         * min(a,b)求最小值</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.max(<span class="number">1</span>, <span class="number">2</span>));<span class="comment">//输出2</span></span><br><span class="line">        System.out.println(Math.min(<span class="number">1.9</span>, -<span class="number">0.2</span>));<span class="comment">//输出-0.2</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 5.对数</span></span><br><span class="line"><span class="comment">         * log(a) a的自然对数(底数是e)</span></span><br><span class="line"><span class="comment">         * log10(a) a 的底数为10的对数</span></span><br><span class="line"><span class="comment">         * log1p(a) a+1的自然对数</span></span><br><span class="line"><span class="comment">         * 值得注意的是，前面其他函数都有重载，对数运算的函数只能传double型数据并返回double型数据</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.log(Math.E));<span class="comment">//输出1.0</span></span><br><span class="line">        System.out.println(Math.log10(<span class="number">10</span>));<span class="comment">//输出1.0</span></span><br><span class="line">        System.out.println(Math.log1p(Math.E-<span class="number">1.0</span>));<span class="comment">//输出1.0</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 6.幂</span></span><br><span class="line"><span class="comment">         * exp(x) 返回e^x的值</span></span><br><span class="line"><span class="comment">         * expm1(x) 返回e^x - 1的值</span></span><br><span class="line"><span class="comment">         * pow(x,y) 返回x^y的值</span></span><br><span class="line"><span class="comment">         * 这里可用的数据类型也只有double型</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.exp(<span class="number">2</span>));<span class="comment">//输出E^2的值</span></span><br><span class="line">        System.out.println(Math.pow(<span class="number">2.0</span>, <span class="number">3.0</span>));<span class="comment">//输出8.0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 7.随机数</span></span><br><span class="line"><span class="comment">         * random()返回[0.0,1.0)之间的double值</span></span><br><span class="line"><span class="comment">         * 这个产生的随机数其实可以通过*x控制</span></span><br><span class="line"><span class="comment">         * 比如(int)(random*100)后可以得到[0,100)之间的整数</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println((<span class="keyword">int</span>)(Math.random()*<span class="number">100</span>));<span class="comment">//输出[0,100)间的随机数</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 8.转换</span></span><br><span class="line"><span class="comment">         * toDegrees(a) 弧度换角度</span></span><br><span class="line"><span class="comment">         * toRadians(a) 角度换弧度</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(Math.toDegrees(Math.PI));<span class="comment">//输出180.0</span></span><br><span class="line">        System.out.println(Math.toRadians(<span class="number">180</span>));<span class="comment">//输出 π 的值</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 9.其他</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//copySign(x,y) 返回 用y的符号取代x的符号后新的x值</span></span><br><span class="line">        System.out.println(Math.copySign(-<span class="number">1.0</span>, <span class="number">2.0</span>));<span class="comment">//输出1.0</span></span><br><span class="line">        System.out.println(Math.copySign(<span class="number">2.0</span>, -<span class="number">1.0</span>));<span class="comment">//输出-2.0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//ceil(a) 返回大于a的第一个整数所对应的浮点数(值是整的，类型是浮点型)</span></span><br><span class="line">        <span class="comment">//可以通过强制转换将类型换成整型</span></span><br><span class="line">        System.out.println(Math.ceil(<span class="number">1.3443</span>));<span class="comment">//输出2.0</span></span><br><span class="line">        System.out.println((<span class="keyword">int</span>)Math.ceil(<span class="number">1.3443</span>));<span class="comment">//输出2</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//floor(a) 返回小于a的第一个整数所对应的浮点数(值是整的，类型是浮点型)</span></span><br><span class="line">        System.out.println(Math.floor(<span class="number">1.3443</span>));<span class="comment">//输出1.0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//rint(a) 返回最接近a的整数的double值</span></span><br><span class="line">        System.out.println(Math.rint(<span class="number">1.2</span>));<span class="comment">//输出1.0</span></span><br><span class="line">        System.out.println(Math.rint(<span class="number">1.8</span>));<span class="comment">//输出2.0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//nextAfter(a,b) 返回(a,b)或(b,a)间与a相邻的浮点数 b可以比a小</span></span><br><span class="line">        System.out.println(Math.nextAfter(<span class="number">1.2</span>, <span class="number">2.7</span>));<span class="comment">//输出1.2000000000000002</span></span><br><span class="line">        System.out.println(Math.nextAfter(<span class="number">1.2</span>, -<span class="number">1</span>));<span class="comment">//输出1.1999999999999997</span></span><br><span class="line">        <span class="comment">//所以这里的b是控制条件</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//nextUp(a) 返回比a大一点点的浮点数</span></span><br><span class="line">        System.out.println(Math.nextUp(<span class="number">1.2</span>));<span class="comment">//输出1.2000000000000002</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//nextDown(a) 返回比a小一点点的浮点数</span></span><br><span class="line">        System.out.println(Math.nextDown(<span class="number">1.2</span>));<span class="comment">//输出1.1999999999999997</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><strong>需要注意round比较特殊。</strong><br><img src="https://img-blog.csdnimg.cn/2021052911560042.png" alt="在这里插入图片描述"><br>实例：保留指定小数位的四舍五入</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MathUtil</span></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> d 要四舍五入的数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n 要保留的小数位</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>  四舍五入的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">round</span><span class="params">(<span class="keyword">double</span> d,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        d *= Math.pow(<span class="number">10</span>,n);</span><br><span class="line">        d = Math.round(d);</span><br><span class="line">        d /= Math.pow(<span class="number">10</span>,n);</span><br><span class="line">        <span class="keyword">return</span> d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MathUtil</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MathDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> a = <span class="number">19.26731</span>;</span><br><span class="line">        System.out.println(Math.round(a));</span><br><span class="line">        a = MathUtil.round(a,<span class="number">2</span>);</span><br><span class="line">        System.out.println(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529124701577.png" alt="在这里插入图片描述"></p>
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java·常用类</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h1><p>提供数学计算公式。被声明为final，构造器私有化，所有方法都是static的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MathDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-comment">// TODO Auto-generated method stub</span><br>        System.out.println(Math.E);<span class="hljs-comment">//比任何其他值都更接近 e（即自然对数的底数）的 double 值。</span><br>        System.out.println(Math.PI);<span class="hljs-comment">//比任何其他值都更接近 pi（即圆的周长与直径之比）的 double 值。</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 1.abs绝对值函数</span><br><span class="hljs-comment">         * 对各种数据类型求绝对值</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.abs(-<span class="hljs-number">10</span>));<span class="hljs-comment">//输出10</span><br><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 2.三角函数与反三角函数</span><br><span class="hljs-comment">         * cos求余弦</span><br><span class="hljs-comment">         * sin求正弦</span><br><span class="hljs-comment">         * tan求正切</span><br><span class="hljs-comment">         * acos求反余弦</span><br><span class="hljs-comment">         * asin求反正弦</span><br><span class="hljs-comment">         * atan求反正切</span><br><span class="hljs-comment">         * atan2(y,x)求向量(x,y)与x轴夹角</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.acos(-<span class="hljs-number">1.0</span>));<span class="hljs-comment">//输出圆周率3.14...</span><br>        System.out.println(Math.atan2(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>));<span class="hljs-comment">//输出 π/4 的小数值</span><br><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 3.开根号</span><br><span class="hljs-comment">         * cbrt(x)开立方</span><br><span class="hljs-comment">         * sqrt(x)开平方</span><br><span class="hljs-comment">         * hypot(x,y)求sqrt(x*x+y*y)在求两点间距离时有用sqrt((x1-x2)^2+(y1-y2)^2)</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.sqrt(<span class="hljs-number">4.0</span>));<span class="hljs-comment">//输出2.0</span><br>        System.out.println(Math.cbrt(<span class="hljs-number">8.0</span>));<span class="hljs-comment">//输出2.0</span><br>        System.out.println(Math.hypot(<span class="hljs-number">3.0</span>, <span class="hljs-number">4.0</span>));<span class="hljs-comment">//输出5.0</span><br><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 4.最值</span><br><span class="hljs-comment">         * max(a,b)求最大值</span><br><span class="hljs-comment">         * min(a,b)求最小值</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.max(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>));<span class="hljs-comment">//输出2</span><br>        System.out.println(Math.min(<span class="hljs-number">1.9</span>, -<span class="hljs-number">0.2</span>));<span class="hljs-comment">//输出-0.2</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 5.对数</span><br><span class="hljs-comment">         * log(a) a的自然对数(底数是e)</span><br><span class="hljs-comment">         * log10(a) a 的底数为10的对数</span><br><span class="hljs-comment">         * log1p(a) a+1的自然对数</span><br><span class="hljs-comment">         * 值得注意的是，前面其他函数都有重载，对数运算的函数只能传double型数据并返回double型数据</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.log(Math.E));<span class="hljs-comment">//输出1.0</span><br>        System.out.println(Math.log10(<span class="hljs-number">10</span>));<span class="hljs-comment">//输出1.0</span><br>        System.out.println(Math.log1p(Math.E-<span class="hljs-number">1.0</span>));<span class="hljs-comment">//输出1.0</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 6.幂</span><br><span class="hljs-comment">         * exp(x) 返回e^x的值</span><br><span class="hljs-comment">         * expm1(x) 返回e^x - 1的值</span><br><span class="hljs-comment">         * pow(x,y) 返回x^y的值</span><br><span class="hljs-comment">         * 这里可用的数据类型也只有double型</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.exp(<span class="hljs-number">2</span>));<span class="hljs-comment">//输出E^2的值</span><br>        System.out.println(Math.pow(<span class="hljs-number">2.0</span>, <span class="hljs-number">3.0</span>));<span class="hljs-comment">//输出8.0</span><br><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 7.随机数</span><br><span class="hljs-comment">         * random()返回[0.0,1.0)之间的double值</span><br><span class="hljs-comment">         * 这个产生的随机数其实可以通过*x控制</span><br><span class="hljs-comment">         * 比如(int)(random*100)后可以得到[0,100)之间的整数</span><br><span class="hljs-comment">         */</span><br>        System.out.println((<span class="hljs-keyword">int</span>)(Math.random()*<span class="hljs-number">100</span>));<span class="hljs-comment">//输出[0,100)间的随机数</span><br><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 8.转换</span><br><span class="hljs-comment">         * toDegrees(a) 弧度换角度</span><br><span class="hljs-comment">         * toRadians(a) 角度换弧度</span><br><span class="hljs-comment">         */</span><br>        System.out.println(Math.toDegrees(Math.PI));<span class="hljs-comment">//输出180.0</span><br>        System.out.println(Math.toRadians(<span class="hljs-number">180</span>));<span class="hljs-comment">//输出 π 的值</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">         * 9.其他</span><br><span class="hljs-comment">         */</span><br><br>        <span class="hljs-comment">//copySign(x,y) 返回 用y的符号取代x的符号后新的x值</span><br>        System.out.println(Math.copySign(-<span class="hljs-number">1.0</span>, <span class="hljs-number">2.0</span>));<span class="hljs-comment">//输出1.0</span><br>        System.out.println(Math.copySign(<span class="hljs-number">2.0</span>, -<span class="hljs-number">1.0</span>));<span class="hljs-comment">//输出-2.0</span><br><br>        <span class="hljs-comment">//ceil(a) 返回大于a的第一个整数所对应的浮点数(值是整的，类型是浮点型)</span><br>        <span class="hljs-comment">//可以通过强制转换将类型换成整型</span><br>        System.out.println(Math.ceil(<span class="hljs-number">1.3443</span>));<span class="hljs-comment">//输出2.0</span><br>        System.out.println((<span class="hljs-keyword">int</span>)Math.ceil(<span class="hljs-number">1.3443</span>));<span class="hljs-comment">//输出2</span><br><br>        <span class="hljs-comment">//floor(a) 返回小于a的第一个整数所对应的浮点数(值是整的，类型是浮点型)</span><br>        System.out.println(Math.floor(<span class="hljs-number">1.3443</span>));<span class="hljs-comment">//输出1.0</span><br><br>        <span class="hljs-comment">//rint(a) 返回最接近a的整数的double值</span><br>        System.out.println(Math.rint(<span class="hljs-number">1.2</span>));<span class="hljs-comment">//输出1.0</span><br>        System.out.println(Math.rint(<span class="hljs-number">1.8</span>));<span class="hljs-comment">//输出2.0</span><br><br><br>        <span class="hljs-comment">//nextAfter(a,b) 返回(a,b)或(b,a)间与a相邻的浮点数 b可以比a小</span><br>        System.out.println(Math.nextAfter(<span class="hljs-number">1.2</span>, <span class="hljs-number">2.7</span>));<span class="hljs-comment">//输出1.2000000000000002</span><br>        System.out.println(Math.nextAfter(<span class="hljs-number">1.2</span>, -<span class="hljs-number">1</span>));<span class="hljs-comment">//输出1.1999999999999997</span><br>        <span class="hljs-comment">//所以这里的b是控制条件</span><br><br>        <span class="hljs-comment">//nextUp(a) 返回比a大一点点的浮点数</span><br>        System.out.println(Math.nextUp(<span class="hljs-number">1.2</span>));<span class="hljs-comment">//输出1.2000000000000002</span><br><br>        <span class="hljs-comment">//nextDown(a) 返回比a小一点点的浮点数</span><br>        System.out.println(Math.nextDown(<span class="hljs-number">1.2</span>));<span class="hljs-comment">//输出1.1999999999999997</span><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p><strong>需要注意round比较特殊。</strong><br><img src="https://img-blog.csdnimg.cn/2021052911560042.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>实例：保留指定小数位的四舍五入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MathUtil</span></span>&#123;<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     *</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> d 要四舍五入的数</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> n 要保留的小数位</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span>  四舍五入的结果</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">round</span><span class="hljs-params">(<span class="hljs-keyword">double</span> d,<span class="hljs-keyword">int</span> n)</span></span>&#123;<br>        d *= Math.pow(<span class="hljs-number">10</span>,n);<br>        d = Math.round(d);<br>        d /= Math.pow(<span class="hljs-number">10</span>,n);<br>        <span class="hljs-keyword">return</span> d;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">MathUtil</span><span class="hljs-params">()</span></span>&#123;&#125;<br><br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MathDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">double</span> a = <span class="hljs-number">19.26731</span>;<br>        System.out.println(Math.round(a));<br>        a = MathUtil.round(a,<span class="hljs-number">2</span>);<br>        System.out.println(a);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529124701577.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <h1 id="Random类"><a href="#Random类" class="headerlink" title="Random类"></a>Random类</h1><p><code>public int nextInt(int bound)</code>产生一个不大于边界的随机的非负整数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Random r = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            System.out.println(r.nextInt(<span class="number">100</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.util.Random;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RandomDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Random r = <span class="hljs-keyword">new</span> Random();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;<br>            System.out.println(r.nextInt(<span class="hljs-number">100</span>));<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>42<br>79<br>60<br>46<br>67<br>50<br>83<br>51<br>37<br>15</p>
 </blockquote>
-<p>具体还有很多方法<br><img src="https://img-blog.csdnimg.cn/2021052913340486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="BigInteger和BigDecimal"><a href="#BigInteger和BigDecimal" class="headerlink" title="BigInteger和BigDecimal"></a>BigInteger和BigDecimal</h1><p><img src="https://img-blog.csdnimg.cn/20210529150518327.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529150720739.png" alt="在这里插入图片描述"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">        BigInteger A = <span class="keyword">new</span> BigInteger(<span class="string">&quot;123131231220412049812312&quot;</span>);</span><br><span class="line">        BigInteger B = <span class="keyword">new</span> BigInteger(<span class="string">&quot;1231231412&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;+:&quot;</span>+A.add(B));</span><br><span class="line">        System.out.println(<span class="string">&quot;-:&quot;</span>+A.subtract(B));</span><br><span class="line">        System.out.println(<span class="string">&quot;*:&quot;</span>+A.multiply(B));</span><br><span class="line">        System.out.println(<span class="string">&quot;/:&quot;</span>+A.divide(B));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529151024216.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2021052915130194.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529151329945.png" alt="在这里插入图片描述"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">        BigInteger A = <span class="keyword">new</span> BigInteger(<span class="string">&quot;123131231220412049812312&quot;</span>);</span><br><span class="line">        BigInteger B = <span class="keyword">new</span> BigInteger(<span class="string">&quot;1231231412&quot;</span>);</span><br><span class="line">        BigInteger[] result = A.divideAndRemainder(B);</span><br><span class="line">        System.out.println(<span class="string">&quot;商：&quot;</span>+result[<span class="number">0</span>]+<span class="string">&quot; 余：&quot;</span>+result[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>具体还有很多方法<br><img src="https://img-blog.csdnimg.cn/2021052913340486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h1 id="BigInteger和BigDecimal"><a href="#BigInteger和BigDecimal" class="headerlink" title="BigInteger和BigDecimal"></a>BigInteger和BigDecimal</h1><p><img src="https://img-blog.csdnimg.cn/20210529150518327.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529150720739.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.math.BigInteger;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span>  </span>&#123;<br>        BigInteger A = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">&quot;123131231220412049812312&quot;</span>);<br>        BigInteger B = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">&quot;1231231412&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;+:&quot;</span>+A.add(B));<br>        System.out.println(<span class="hljs-string">&quot;-:&quot;</span>+A.subtract(B));<br>        System.out.println(<span class="hljs-string">&quot;*:&quot;</span>+A.multiply(B));<br>        System.out.println(<span class="hljs-string">&quot;/:&quot;</span>+A.divide(B));<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529151024216.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2021052915130194.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529151329945.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.math.BigInteger;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span>  </span>&#123;<br>        BigInteger A = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">&quot;123131231220412049812312&quot;</span>);<br>        BigInteger B = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">&quot;1231231412&quot;</span>);<br>        BigInteger[] result = A.divideAndRemainder(B);<br>        System.out.println(<span class="hljs-string">&quot;商：&quot;</span>+result[<span class="hljs-number">0</span>]+<span class="hljs-string">&quot; 余：&quot;</span>+result[<span class="hljs-number">1</span>]);<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>商：100006570674150 余：553412512</p>
 </blockquote>
 <p>BigDecimal与BigInteger类似。</p>
-<h1 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">        Date d = <span class="keyword">new</span> Date();</span><br><span class="line">        System.out.println(d);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529152523730.png" alt="在这里插入图片描述"><br><strong>通过观察Date类构造器可以发现，Date类只是对long数据的一种包装。</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">        Date d = <span class="keyword">new</span> Date();</span><br><span class="line">        <span class="keyword">long</span> current = d.getTime();</span><br><span class="line">        current += <span class="number">864000000</span>;<span class="comment">//10天的毫秒数</span></span><br><span class="line">        Date e = <span class="keyword">new</span> Date(current);</span><br><span class="line">        System.out.println(e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span>  </span>&#123;<br>        Date d = <span class="hljs-keyword">new</span> Date();<br>        System.out.println(d);<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529152523730.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><strong>通过观察Date类构造器可以发现，Date类只是对long数据的一种包装。</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span>  </span>&#123;<br>        Date d = <span class="hljs-keyword">new</span> Date();<br>        <span class="hljs-keyword">long</span> current = d.getTime();<br>        current += <span class="hljs-number">864000000</span>;<span class="hljs-comment">//10天的毫秒数</span><br>        Date e = <span class="hljs-keyword">new</span> Date(current);<br>        System.out.println(e);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/20210529152829839.png" alt="在这里插入图片描述"></p>
-<h1 id="SimpleDateFormat"><a href="#SimpleDateFormat" class="headerlink" title="SimpleDateFormat"></a>SimpleDateFormat</h1><p>对日期格式化处理。<br><img src="https://img-blog.csdnimg.cn/20210529153757490.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529154039378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Date-&gt;字符串</strong> <strong>format方法</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">        Date d = <span class="keyword">new</span> Date();</span><br><span class="line">        SimpleDateFormat s = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd hh:mm:ss SSS&quot;</span>);</span><br><span class="line">        String str = s.format(d);</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529154211802.png" alt="在这里插入图片描述"><br><strong>也可以用parse方法将字符串日期转化为Date类：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20210529152829839.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h1 id="SimpleDateFormat"><a href="#SimpleDateFormat" class="headerlink" title="SimpleDateFormat"></a>SimpleDateFormat</h1><p>对日期格式化处理。<br><img src="https://img-blog.csdnimg.cn/20210529153757490.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529154039378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><strong>Date-&gt;字符串</strong> <strong>format方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><br><span class="hljs-keyword">import</span> java.text.SimpleDateFormat;<br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span>  </span>&#123;<br>        Date d = <span class="hljs-keyword">new</span> Date();<br>        SimpleDateFormat s = <span class="hljs-keyword">new</span> SimpleDateFormat(<span class="hljs-string">&quot;yyyy-MM-dd hh:mm:ss SSS&quot;</span>);<br>        String str = s.format(d);<br>        System.out.println(str);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529154211802.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><strong>也可以用parse方法将字符串日期转化为Date类：</strong></p>
 <p><strong>字符串-&gt;Date parse方法</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line">        String birthday = <span class="string">&quot;2001-01-01 11:00:01&quot;</span>;</span><br><span class="line">        SimpleDateFormat s = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);</span><br><span class="line">        Date d = s.parse(birthday);</span><br><span class="line">        System.out.println(d);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529154532362.png" alt="在这里插入图片描述"></p>
-<h1 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h1><p><img src="https://img-blog.csdnimg.cn/20210529155319126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Calendar c = Calendar.getInstance();</span><br><span class="line">        System.out.println(c.getClass());</span><br><span class="line">        System.out.println(c.getTime());</span><br><span class="line">        <span class="comment">//get方法</span></span><br><span class="line">        System.out.println(c.get(Calendar.DAY_OF_MONTH));</span><br><span class="line">        System.out.println(c.get(Calendar.DAY_OF_WEEK));</span><br><span class="line">        <span class="comment">//set方法</span></span><br><span class="line">        c.set(Calendar.DAY_OF_MONTH,<span class="number">10</span>);</span><br><span class="line">        System.out.println(c.get(Calendar.DAY_OF_MONTH));</span><br><span class="line">        System.out.println(c.getTime());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529160016841.png" alt="在这里插入图片描述"><br>还有<strong>add，setTime</strong>等方法。</p>
-<h1 id="JDK8中的时间日期API"><a href="#JDK8中的时间日期API" class="headerlink" title="JDK8中的时间日期API"></a>JDK8中的时间日期API</h1><p><img src="https://img-blog.csdnimg.cn/20210529160640133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529161011455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529161341221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>now方法实例化</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDate;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalTime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LocalDate d = LocalDate.now();</span><br><span class="line">        LocalTime t = LocalTime.now();</span><br><span class="line">        LocalDateTime dt = LocalDateTime.now();</span><br><span class="line">        System.out.println(d);</span><br><span class="line">        System.out.println(t);</span><br><span class="line">        System.out.println(dt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529161537471.png" alt="在这里插入图片描述"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDate;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalTime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LocalDateTime d = LocalDateTime.of(<span class="number">2020</span>, <span class="number">10</span>, <span class="number">6</span>, <span class="number">13</span>, <span class="number">23</span>, <span class="number">43</span>);</span><br><span class="line">        System.out.println(d);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>of方法实例化 指定年月日时分秒 不用偏移量</strong><br><img src="https://img-blog.csdnimg.cn/20210529161738528.png" alt="在这里插入图片描述"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       LocalDateTime d = LocalDateTime.now();</span><br><span class="line">        System.out.println(d.getDayOfMonth());</span><br><span class="line">        System.out.println(d.getDayOfWeek());</span><br><span class="line">        System.out.println(d.getMonth());</span><br><span class="line">        System.out.println(d.getMonthValue());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><br><span class="hljs-keyword">import</span> java.text.ParseException;<br><span class="hljs-keyword">import</span> java.text.SimpleDateFormat;<br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> ParseException </span>&#123;<br>        String birthday = <span class="hljs-string">&quot;2001-01-01 11:00:01&quot;</span>;<br>        SimpleDateFormat s = <span class="hljs-keyword">new</span> SimpleDateFormat(<span class="hljs-string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);<br>        Date d = s.parse(birthday);<br>        System.out.println(d);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529154532362.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h1 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h1><p><img src="https://img-blog.csdnimg.cn/20210529155319126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.util.Calendar;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Calendar c = Calendar.getInstance();<br>        System.out.println(c.getClass());<br>        System.out.println(c.getTime());<br>        <span class="hljs-comment">//get方法</span><br>        System.out.println(c.get(Calendar.DAY_OF_MONTH));<br>        System.out.println(c.get(Calendar.DAY_OF_WEEK));<br>        <span class="hljs-comment">//set方法</span><br>        c.set(Calendar.DAY_OF_MONTH,<span class="hljs-number">10</span>);<br>        System.out.println(c.get(Calendar.DAY_OF_MONTH));<br>        System.out.println(c.getTime());<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529160016841.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>还有<strong>add，setTime</strong>等方法。</p>
+<h1 id="JDK8中的时间日期API"><a href="#JDK8中的时间日期API" class="headerlink" title="JDK8中的时间日期API"></a>JDK8中的时间日期API</h1><p><img src="https://img-blog.csdnimg.cn/20210529160640133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529161011455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210529161341221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><strong>now方法实例化</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.time.LocalDate;<br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><span class="hljs-keyword">import</span> java.time.LocalTime;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        LocalDate d = LocalDate.now();<br>        LocalTime t = LocalTime.now();<br>        LocalDateTime dt = LocalDateTime.now();<br>        System.out.println(d);<br>        System.out.println(t);<br>        System.out.println(dt);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529161537471.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.time.LocalDate;<br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><span class="hljs-keyword">import</span> java.time.LocalTime;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        LocalDateTime d = LocalDateTime.of(<span class="hljs-number">2020</span>, <span class="hljs-number">10</span>, <span class="hljs-number">6</span>, <span class="hljs-number">13</span>, <span class="hljs-number">23</span>, <span class="hljs-number">43</span>);<br>        System.out.println(d);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>of方法实例化 指定年月日时分秒 不用偏移量</strong><br><img src="https://img-blog.csdnimg.cn/20210529161738528.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>       LocalDateTime d = LocalDateTime.now();<br>        System.out.println(d.getDayOfMonth());<br>        System.out.println(d.getDayOfWeek());<br>        System.out.println(d.getMonth());<br>        System.out.println(d.getMonthValue());<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/20210529162100640.png" alt="在这里插入图片描述"><br>设置用<strong>with</strong>方法（<strong>不是set方法</strong>） 可以发现本身的d没有变。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       LocalDateTime d = LocalDateTime.now();</span><br><span class="line">       LocalDateTime l = d.withDayOfMonth(<span class="number">22</span>);</span><br><span class="line">        System.out.println(d);</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529162333194.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210529162100640.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>设置用<strong>with</strong>方法（<strong>不是set方法</strong>） 可以发现本身的d没有变。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>       LocalDateTime d = LocalDateTime.now();<br>       LocalDateTime l = d.withDayOfMonth(<span class="hljs-number">22</span>);<br>        System.out.println(d);<br>        System.out.println(l);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529162333194.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <p>加操作：plus 由于不可变性， 所以本身的d还是不变的</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       LocalDateTime d = LocalDateTime.now();</span><br><span class="line">       LocalDateTime l = d.plusMonths(<span class="number">3</span>);</span><br><span class="line">        System.out.println(d);</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529162503951.png" alt="在这里插入图片描述"><br>减操作用minus。</p>
-<h1 id="DateTimeFormatter"><a href="#DateTimeFormatter" class="headerlink" title="DateTimeFormatter"></a>DateTimeFormatter</h1><p><img src="https://img-blog.csdnimg.cn/20210529162740297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>比较常用的是自定义格式。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo08;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.format.DateTimeFormatter;</span><br><span class="line"><span class="keyword">import</span> java.time.temporal.TemporalAccessor;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        DateTimeFormatter f = DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);</span><br><span class="line">        LocalDateTime d = LocalDateTime.now();</span><br><span class="line">        String s = f.format(d);</span><br><span class="line">        System.out.println(s);</span><br><span class="line"></span><br><span class="line">        String s1 = <span class="string">&quot;2001-02-10 12:12:13&quot;</span>;</span><br><span class="line">        TemporalAccessor ta = f.parse(s1);</span><br><span class="line">        System.out.println(ta);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210529163753220.png" alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>       LocalDateTime d = LocalDateTime.now();<br>       LocalDateTime l = d.plusMonths(<span class="hljs-number">3</span>);<br>        System.out.println(d);<br>        System.out.println(l);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529162503951.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>减操作用minus。</p>
+<h1 id="DateTimeFormatter"><a href="#DateTimeFormatter" class="headerlink" title="DateTimeFormatter"></a>DateTimeFormatter</h1><p><img src="https://img-blog.csdnimg.cn/20210529162740297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FIYXdrZXll,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>比较常用的是自定义格式。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> demo08;<br><br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;<br><span class="hljs-keyword">import</span> java.time.temporal.TemporalAccessor;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaAPIDemo</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        DateTimeFormatter f = DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);<br>        LocalDateTime d = LocalDateTime.now();<br>        String s = f.format(d);<br>        System.out.println(s);<br><br>        String s1 = <span class="hljs-string">&quot;2001-02-10 12:12:13&quot;</span>;<br>        TemporalAccessor ta = f.parse(s1);<br>        System.out.println(ta);<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210529163753220.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Java·常用类</div>
+      <div>http://example.com/2021/05/29/Java%C2%B7%E5%B8%B8%E7%94%A8%E7%B1%BB%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</div>
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/05/27/Java%C2%B7%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="Java·基础类库">
-                  <i class="fa fa-chevron-left"></i> Java·基础类库
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2021/06/01/Java%C2%B7IO%E6%B5%81%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="Java·IO流">
-                  Java·IO流 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-<script src="/js/comments.js"></script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">AHawkeye</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>AHawkeye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年5月29日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/01/Java%C2%B7IO%E6%B5%81%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" title="Java·IO流">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java·IO流</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/27/Java%C2%B7%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Java·基础类库">
+                        <span class="hidden-mobile">Java·基础类库</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

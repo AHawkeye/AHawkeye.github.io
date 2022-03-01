@@ -1,298 +1,356 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="第一个Lambda表达式先来看一段根据字符串长度排序的Test.java 1234567891011121314151617package com.xzc;import java.util.Arrays;import java.util.Comparator;public class Test &amp;#123;    public static void main(String[] args) &amp;#1">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="AHawkeye">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="第一个Lambda表达式先来看一段根据字符串长度排序的Test.java 1234567891011121314151617package com.xzc;import java.util.Arrays;import java.util.Comparator;public class Test &amp;#123;    public static void main(String[] args) &amp;#1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java·Lambda表达式">
 <meta property="og:url" content="http://example.com/2021/05/04/Java%C2%B7Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="SOMETHING">
 <meta property="og:description" content="第一个Lambda表达式先来看一段根据字符串长度排序的Test.java 1234567891011121314151617package com.xzc;import java.util.Arrays;import java.util.Comparator;public class Test &amp;#123;    public static void main(String[] args) &amp;#1">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-04T03:19:32.000Z">
 <meta property="article:modified_time" content="2021-06-03T02:12:53.879Z">
 <meta property="article:author" content="AHawkeye">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>Java·Lambda表达式 - SOMETHING</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="http://example.com/2021/05/04/Java%C2%B7Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;05&#x2F;04&#x2F;Java%C2%B7Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;04&#x2F;Java·Lambda表达式·学习笔记&#x2F;&quot;,&quot;title&quot;:&quot;Java·Lambda表达式&quot;}</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Java·Lambda表达式 | SOMETHING</title><script src="/js/config.js"></script>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-    </div>
-  </div>
 
-  <div class="site-meta">
+<body>
+  
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">SOMETHING</h1>
-      <i class="logo-line"></i>
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-
-
-
-
-
-
-</div>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
       </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AALambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">第一个Lambda表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.</span> <span class="nav-text">常用的函数式接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Predicate"><span class="nav-number">2.1.</span> <span class="nav-text">Predicate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Consumer"><span class="nav-number">2.2.</span> <span class="nav-text">Consumer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">2.3.</span> <span class="nav-text">Function</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">方法引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E5%90%88Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">复合Lambda表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E5%99%A8%E5%A4%8D%E5%90%88"><span class="nav-number">4.1.</span> <span class="nav-text">比较器复合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%86%E5%BA%8F"><span class="nav-number">4.1.1.</span> <span class="nav-text">逆序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E5%99%A8%E9%93%BE"><span class="nav-number">4.1.2.</span> <span class="nav-text">比较器链</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%93%E8%AF%8D%E5%A4%8D%E5%90%88"><span class="nav-number">4.2.</span> <span class="nav-text">谓词复合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%A4%8D%E5%90%88"><span class="nav-number">4.3.</span> <span class="nav-text">函数复合</span></a></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">AHawkeye</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
+  </div>
+</nav>
 
+  
 
-    </header>
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Java·Lambda表达式"></span>
+          
+        </div>
 
+        
+          
+  <div class="mt-3">
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-05-04 11:19" pubdate>
+          2021年5月4日 上午
+        </time>
+      </span>
+    
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/04/Java%C2%B7Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="AHawkeye">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SOMETHING">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Java·Lambda表达式
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k 字
+        
       </span>
-      <span class="post-meta-item-text">Posted on</span>
+    
 
-      <time title="Created: 2021-05-04 11:19:32" itemprop="dateCreated datePublished" datetime="2021-05-04T11:19:32+08:00">2021-05-04</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-03 10:12:53" itemprop="dateModified" datetime="2021-06-03T10:12:53+08:00">2021-06-03</time>
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          93 分钟
+        
       </span>
+    
 
-  
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
 </div>
 
-        </div>
-      </header>
+</div>
 
+  </header>
+
+  <main>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="第一个Lambda表达式"><a href="#第一个Lambda表达式" class="headerlink" title="第一个Lambda表达式"></a>第一个Lambda表达式</h1><p>先来看一段根据字符串长度排序的Test.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] s1 =&#123;<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;abcd&quot;</span>,<span class="string">&quot;abc&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(s1, <span class="keyword">new</span> Comparator&lt;String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o1.length() - o2.length();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        System.out.println(Arrays.toString(s1));        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java·Lambda表达式</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="第一个Lambda表达式"><a href="#第一个Lambda表达式" class="headerlink" title="第一个Lambda表达式"></a>第一个Lambda表达式</h1><p>先来看一段根据字符串长度排序的Test.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        String[] s1 =&#123;<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;abcd&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>&#125;;<br>        Arrays.sort(s1, <span class="hljs-keyword">new</span> Comparator&lt;String&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(String o1, String o2)</span> </span>&#123;<br>                <span class="hljs-keyword">return</span> o1.length() - o2.length();<br>            &#125;<br>        &#125;);<br>        System.out.println(Arrays.toString(s1));        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>[a, ab, abc, abcd]</p>
 </blockquote>
 <p>如果我们用lambda表达式取而代之：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] s1 =&#123;<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;abcd&quot;</span>,<span class="string">&quot;abc&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(s1,(String o1, String o2) -&gt; o1.length() - o2.length());</span><br><span class="line">        System.out.println(Arrays.toString(s1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        String[] s1 =&#123;<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;abcd&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>&#125;;<br>        Arrays.sort(s1,(String o1, String o2) -&gt; o1.length() - o2.length());<br>        System.out.println(Arrays.toString(s1));<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>[a, ab, abc, abcd]</p>
 </blockquote>
 <p>可以发现简单许多，而其中的<code>Arrays.sort(s1,(String o1, String o2) -&gt; o1.length() - o2.length());</code>就是我们的第一个lambda表达式。</p>
 <h1 id="常用的函数式接口"><a href="#常用的函数式接口" class="headerlink" title="常用的函数式接口"></a>常用的函数式接口</h1><h2 id="Predicate"><a href="#Predicate" class="headerlink" title="Predicate"></a>Predicate</h2><p><code>java.util.function.Predicate&lt;T&gt;</code>定义了一个名叫test的抽象方法，它接受泛型T对象，并返回一个boolean。在你需要涉及类型T的布尔表达式时，就可以使用这个接口。直接上代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Predicate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">filter</span><span class="params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;</span><br><span class="line">        List&lt;T&gt; results = <span class="keyword">new</span> ArrayList&lt;T&gt;();</span><br><span class="line">        <span class="keyword">for</span>(T l : list)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p.test(l))&#123;</span><br><span class="line">                results.add(l);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; l = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        l.add(<span class="string">&quot;abcd&quot;</span>);</span><br><span class="line">        l.add(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        l.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        System.out.println(l);</span><br><span class="line">        List&lt;String&gt; l1 = filter(l,(String s) -&gt; (!s.isEmpty()));</span><br><span class="line">        System.out.println(l1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.function.Predicate;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function">List&lt;T&gt; <span class="hljs-title">filter</span><span class="hljs-params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;<br>        List&lt;T&gt; results = <span class="hljs-keyword">new</span> ArrayList&lt;T&gt;();<br>        <span class="hljs-keyword">for</span>(T l : list)&#123;<br>            <span class="hljs-keyword">if</span>(p.test(l))&#123;<br>                results.add(l);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> results;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        List&lt;String&gt; l = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        l.add(<span class="hljs-string">&quot;abcd&quot;</span>);<br>        l.add(<span class="hljs-string">&quot;&quot;</span>);<br>        l.add(<span class="hljs-string">&quot;abc&quot;</span>);<br>        System.out.println(l);<br>        List&lt;String&gt; l1 = filter(l,(String s) -&gt; (!s.isEmpty()));<br>        System.out.println(l1);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <blockquote>
 <p>[abcd, , abc]<br> [abcd, abc]</p>
 </blockquote>
 <p>我们这里用泛型方法传入String类的List，对其中进行非空字符串判断，然后返回一个String类的List，其中剔除了空字符串。这里我们就是把进行判断的boolean函数进行参数化，然后在执行的时候将行为（这里是判断字符串非空）当做参数传入，我们这里的lambda表达式覆写了test方法。</p>
 <h2 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h2><p><code>java.util.function.Consumer&lt;T&gt;</code>定义了一个名为accept的抽象方法，它接受泛型T的对象，没有返回。如果你要访问T的对象，并对它执行某些操作，就可以用这个借口。直接上代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Consumer;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">forEach</span><span class="params">(List&lt;T&gt; list, Consumer&lt;T&gt; c)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (T l : list)&#123;</span><br><span class="line">            c.accept(l);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        forEach(Arrays.asList(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>),(Integer integer) -&gt; System.out.println(integer));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.function.Consumer;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">forEach</span><span class="hljs-params">(List&lt;T&gt; list, Consumer&lt;T&gt; c)</span></span>&#123;<br>        <span class="hljs-keyword">for</span> (T l : list)&#123;<br>            c.accept(l);<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        forEach(Arrays.asList(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>),(Integer integer) -&gt; System.out.println(integer));<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>1<br>2<br>3<br>4<br>5</p>
 </blockquote>
 <p>我们这里就是把参数化的行为accept，用lambda表达式进行覆写，覆写为打印list的每个对象。</p>
 <h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p><code>java.util.function.Function&lt;T,R&gt;</code>接口定义了一个叫做apply的方法，它接受一个泛型T的对象，并返回一个泛型R的对象，如果你需要定义一个lambda，将输入对象的信息映射到输出，可以使用这个接口，直接上代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T,R&gt; <span class="function">List&lt;R&gt; <span class="title">map</span><span class="params">(List&lt;T&gt; list, Function&lt;T,R&gt; f)</span></span>&#123;</span><br><span class="line">        List&lt;R&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(T l : list)&#123;</span><br><span class="line">            result.add(f.apply(l));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; l = map(Arrays.asList(<span class="string">&quot;lambda&quot;</span>,<span class="string">&quot;in&quot;</span>,<span class="string">&quot;actions&quot;</span>),(String s)-&gt;s.length());</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.function.Function;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T,R&gt; <span class="hljs-function">List&lt;R&gt; <span class="hljs-title">map</span><span class="hljs-params">(List&lt;T&gt; list, Function&lt;T,R&gt; f)</span></span>&#123;<br>        List&lt;R&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span>(T l : list)&#123;<br>            result.add(f.apply(l));<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        List&lt;Integer&gt; l = map(Arrays.asList(<span class="hljs-string">&quot;lambda&quot;</span>,<span class="hljs-string">&quot;in&quot;</span>,<span class="hljs-string">&quot;actions&quot;</span>),(String s)-&gt;s.length());<br>        System.out.println(l);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <blockquote>
 <p>[6, 2, 7]</p>
 </blockquote>
 <p>这里我们对泛型T返回泛型R传入了String返回Integer，即覆写apply方法为传入String类s返回s的长度，即将String类输入，映射到一个Integer类输出，并且在map方法里把它添加到一个Integer类的List来执行这个apply行为。</p>
 <h1 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h1><p>方法引用让你可以重复使用现有的方法定义，并像lambda一样传递它们。实际上某些情况下虽然方法引用简洁，但是不如lambda表达式可读性高。先举一个例子，我们将前面第一个lambda表达式变为方法引用就是</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] s1 =&#123;<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;abcd&quot;</span>,<span class="string">&quot;abc&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(s1, Comparator.comparingInt(String::length));</span><br><span class="line">        System.out.println(Arrays.toString(s1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        String[] s1 =&#123;<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;abcd&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>&#125;;<br>        Arrays.sort(s1, Comparator.comparingInt(String::length));<br>        System.out.println(Arrays.toString(s1));<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p><code>java Comparator.comparingInt(String::length) </code>这里就是方法引用，其中的方法<strong>不能带括号</strong>。<br>方法引用可以被看做仅仅调用特定方法的lambda的一种快捷写法，如果一个lambda代表的只是数值解调用这个方法，那么最好是用名称去调用它，而不是描述如何调用它。<br>方法引用主要有三类：<br>1.指向静态方法的方法引用，例如Integer的parseInt方法，写作Integer::ParseInt<br>2.指向<strong>任意类型实例方法</strong>的方法引用，例如String的length方法，写作String::length<br>3.指向<strong>现有对象的实例方法</strong>的方法引用，假设你有一个局部变量a，用于存放A类型的对象，它支持实例方法m，那么你就可以写a::m。<br>第二种方法引用的思想就是你在引用一个对象的方法，而这个对象本身是lambda的一个参数，比如lambda表达式<code>(String s) -&gt; s.toUpperCase()</code>可以写作<code>String::toUpperCase</code>，但第三种方法引用指的是，你在lambda中调用一个<strong>已经存在的外部对象</strong>中的方法，例如lambda表达式<code>() -&gt; expensiveTransaction.getValue()</code>可以写作<code>expensiveTransaction::getValue</code>这里的expensiveTransaction是一个外部对象，不是lambda的一个参数。<br>现在，我们的Function可以这么写：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T,R&gt; <span class="function">List&lt;R&gt; <span class="title">map</span><span class="params">(List&lt;T&gt; list, Function&lt;T,R&gt; f)</span></span>&#123;</span><br><span class="line">        List&lt;R&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(T l : list)&#123;</span><br><span class="line">            result.add(f.apply(l));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; l = map(Arrays.asList(<span class="string">&quot;lambda&quot;</span>,<span class="string">&quot;in&quot;</span>,<span class="string">&quot;actions&quot;</span>), String::length);<span class="comment">//方法引用 之前是(String s)-&gt;s.length()</span></span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.function.Function;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T,R&gt; <span class="hljs-function">List&lt;R&gt; <span class="hljs-title">map</span><span class="hljs-params">(List&lt;T&gt; list, Function&lt;T,R&gt; f)</span></span>&#123;<br>        List&lt;R&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span>(T l : list)&#123;<br>            result.add(f.apply(l));<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        List&lt;Integer&gt; l = map(Arrays.asList(<span class="hljs-string">&quot;lambda&quot;</span>,<span class="hljs-string">&quot;in&quot;</span>,<span class="hljs-string">&quot;actions&quot;</span>), String::length);<span class="hljs-comment">//方法引用 之前是(String s)-&gt;s.length()</span><br>        System.out.println(l);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h1 id="复合Lambda表达式"><a href="#复合Lambda表达式" class="headerlink" title="复合Lambda表达式"></a>复合Lambda表达式</h1><p>许多函数式接口，比如用于传递lambda表达式的comparator，function，predicate都提供了允许你进行复合的方法，意味着你可以把多个简单的lambda表达式复合成复杂的表达式，函数式接口为什么有多个方法呢？这是因为使用的都是<strong>默认方法</strong>。</p>
 <h2 id="比较器复合"><a href="#比较器复合" class="headerlink" title="比较器复合"></a>比较器复合</h2><p><code>java Arrays.sort(s1, Comparator.comparingInt(String::length)) </code>展示了静态方法comparingInt根据提取用于比较的键值的Function来返回一个comparator。</p>
 <h3 id="逆序"><a href="#逆序" class="headerlink" title="逆序"></a>逆序</h3><p>如果我想对字符串长度逆序怎么办，接口有一个默认方法reversed可以使给定的比较器逆序。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] s1 =&#123;<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;abcd&quot;</span>,<span class="string">&quot;abc&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(s1, Comparator.comparingInt(String::length).reversed());</span><br><span class="line">        System.out.println(Arrays.toString(s1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        String[] s1 =&#123;<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;abcd&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>&#125;;<br>        Arrays.sort(s1, Comparator.comparingInt(String::length).reversed());<br>        System.out.println(Arrays.toString(s1));<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>[abcd, abc, ab, a]</p>
 </blockquote>
 <h3 id="比较器链"><a href="#比较器链" class="headerlink" title="比较器链"></a>比较器链</h3><p>如果有两个字符串长度一样，哪个排在前面呢？可以来第二个比较，有一个默认方法是thenComparing。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] s1 =&#123;<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;abd&quot;</span>,<span class="string">&quot;abc&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(s1, Comparator.comparingInt(String::length).reversed());</span><br><span class="line">        System.out.println(Arrays.toString(s1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        String[] s1 =&#123;<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;abd&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>&#125;;<br>        Arrays.sort(s1, Comparator.comparingInt(String::length).reversed());<br>        System.out.println(Arrays.toString(s1));<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>这里我们输出结果是</p>
 <blockquote>
 <p>[abd, abc, ab, a]</p>
 </blockquote>
 <p>如果我们想先按长度逆序排序，再按字典顺序排序呢，也就是abc要在abd前面该怎么办，直接用thenComparing方法即可。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] s1 =&#123;<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;abd&quot;</span>,<span class="string">&quot;abc&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(s1, Comparator.comparingInt(String::length).reversed().thenComparing(String::toString));</span><br><span class="line">        System.out.println(Arrays.toString(s1));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Comparator;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        String[] s1 =&#123;<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;abd&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>&#125;;<br>        Arrays.sort(s1, Comparator.comparingInt(String::length).reversed().thenComparing(String::toString));<br>        System.out.println(Arrays.toString(s1));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>[abc, abd, ab, a]</p>
 </blockquote>
 <h2 id="谓词复合"><a href="#谓词复合" class="headerlink" title="谓词复合"></a>谓词复合</h2><p>谓词接口包括三个方法：negate，and和or，让你可以重用已有的predicate来创建更复杂的谓词。<br>我们先新建一个Apple类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> weight;</span><br><span class="line">    <span class="keyword">private</span> String color;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Apple</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Apple</span><span class="params">(<span class="keyword">int</span> weight,String color)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.weight = weight;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWeight</span><span class="params">(<span class="keyword">int</span> weight)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.weight = weight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> weight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setColor</span><span class="params">(String color)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getColor</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Apple&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;weight=&quot;</span> + weight +</span><br><span class="line">                <span class="string">&quot;, color=&#x27;&quot;</span> + color + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Apple</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> weight;<br>    <span class="hljs-keyword">private</span> String color;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Apple</span><span class="hljs-params">()</span></span>&#123;<br><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Apple</span><span class="hljs-params">(<span class="hljs-keyword">int</span> weight,String color)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.weight = weight;<br>        <span class="hljs-keyword">this</span>.color = color;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setWeight</span><span class="hljs-params">(<span class="hljs-keyword">int</span> weight)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.weight = weight;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getWeight</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> weight;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setColor</span><span class="hljs-params">(String color)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.color = color;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getColor</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.color;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Apple&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;weight=&quot;</span> + weight +<br>                <span class="hljs-string">&quot;, color=&#x27;&quot;</span> + color + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 <p>我们要把Apple类的List中的红苹果提取出来：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Predicate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">getRedApple</span><span class="params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;</span><br><span class="line">        List&lt;T&gt; results = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (T l : list)&#123;</span><br><span class="line">            <span class="keyword">if</span> (p.test(l))&#123;</span><br><span class="line">                results.add(l);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(getRedApple(Arrays.asList(<span class="keyword">new</span> Apple(<span class="number">150</span>,<span class="string">&quot;red&quot;</span>),<span class="keyword">new</span> Apple(<span class="number">160</span>,<span class="string">&quot;green&quot;</span>),<span class="keyword">new</span> Apple(<span class="number">160</span>,<span class="string">&quot;red&quot;</span>)),(Apple a) -&gt; (a.getColor().equals(<span class="string">&quot;red&quot;</span>)||a.getColor().equals(<span class="string">&quot;Red&quot;</span>))));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.function.Predicate;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function">List&lt;T&gt; <span class="hljs-title">getRedApple</span><span class="hljs-params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;<br>        List&lt;T&gt; results = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (T l : list)&#123;<br>            <span class="hljs-keyword">if</span> (p.test(l))&#123;<br>                results.add(l);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> results;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        System.out.println(getRedApple(Arrays.asList(<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">150</span>,<span class="hljs-string">&quot;red&quot;</span>),<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">160</span>,<span class="hljs-string">&quot;green&quot;</span>),<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">160</span>,<span class="hljs-string">&quot;red&quot;</span>)),(Apple a) -&gt; (a.getColor().equals(<span class="hljs-string">&quot;red&quot;</span>)||a.getColor().equals(<span class="hljs-string">&quot;Red&quot;</span>))));<br>    &#125;<br><br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <blockquote>
 <p>[Apple{weight=150, color=’red’}, Apple{weight=160, color=’red’}]</p>
 </blockquote>
 <p>可以看到我们这里的predicate的test方法传入了我们的lambda表达式，判断苹果是红的。<br>如果我们想进一步，要重量大于150呢？用and方法即可。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Predicate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">getRedApple</span><span class="params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;</span><br><span class="line">        List&lt;T&gt; results = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (T l : list)&#123;</span><br><span class="line">            <span class="keyword">if</span> (p.test(l))&#123;</span><br><span class="line">                results.add(l);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Predicate&lt;Apple&gt; p = (Apple a) -&gt; (a.getColor().equals(<span class="string">&quot;red&quot;</span>)||a.getColor().equals(<span class="string">&quot;Red&quot;</span>));</span><br><span class="line">        System.out.println(getRedApple(Arrays.asList(<span class="keyword">new</span> Apple(<span class="number">150</span>,<span class="string">&quot;red&quot;</span>),<span class="keyword">new</span> Apple(<span class="number">160</span>,<span class="string">&quot;green&quot;</span>),<span class="keyword">new</span> Apple(<span class="number">160</span>,<span class="string">&quot;red&quot;</span>)),p.and(a -&gt; a.getWeight() &gt; <span class="number">150</span>)));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.function.Predicate;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function">List&lt;T&gt; <span class="hljs-title">getRedApple</span><span class="hljs-params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;<br>        List&lt;T&gt; results = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (T l : list)&#123;<br>            <span class="hljs-keyword">if</span> (p.test(l))&#123;<br>                results.add(l);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> results;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Predicate&lt;Apple&gt; p = (Apple a) -&gt; (a.getColor().equals(<span class="hljs-string">&quot;red&quot;</span>)||a.getColor().equals(<span class="hljs-string">&quot;Red&quot;</span>));<br>        System.out.println(getRedApple(Arrays.asList(<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">150</span>,<span class="hljs-string">&quot;red&quot;</span>),<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">160</span>,<span class="hljs-string">&quot;green&quot;</span>),<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">160</span>,<span class="hljs-string">&quot;red&quot;</span>)),p.and(a -&gt; a.getWeight() &gt; <span class="hljs-number">150</span>)));<br>    &#125;<br><br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>[Apple{weight=160, color=’red’}] </p>
 </blockquote>
 <p>这里我们把p先单独拿出来，方便观察，注意</p>
 <p><code>java p.and(a -&gt; a.getWeight() &gt; 150) </code><br>没有声明a是Apple类型，这里lambda表达式进行了类型检查。我们对p进行了and复合，要求重量在150之上，如果我们要不是红苹果的呢？用negate复合即可。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Predicate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">getRedApple</span><span class="params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;</span><br><span class="line">        List&lt;T&gt; results = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (T l : list)&#123;</span><br><span class="line">            <span class="keyword">if</span> (p.test(l))&#123;</span><br><span class="line">                results.add(l);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Predicate&lt;Apple&gt; p = (Apple a) -&gt; (a.getColor().equals(<span class="string">&quot;red&quot;</span>)||a.getColor().equals(<span class="string">&quot;Red&quot;</span>));</span><br><span class="line">        System.out.println(getRedApple(Arrays.asList(<span class="keyword">new</span> Apple(<span class="number">150</span>,<span class="string">&quot;red&quot;</span>),<span class="keyword">new</span> Apple(<span class="number">160</span>,<span class="string">&quot;green&quot;</span>),<span class="keyword">new</span> Apple(<span class="number">160</span>,<span class="string">&quot;red&quot;</span>)),p.negate()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.function.Predicate;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function">List&lt;T&gt; <span class="hljs-title">getRedApple</span><span class="hljs-params">(List&lt;T&gt; list, Predicate&lt;T&gt; p)</span></span>&#123;<br>        List&lt;T&gt; results = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (T l : list)&#123;<br>            <span class="hljs-keyword">if</span> (p.test(l))&#123;<br>                results.add(l);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> results;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Predicate&lt;Apple&gt; p = (Apple a) -&gt; (a.getColor().equals(<span class="hljs-string">&quot;red&quot;</span>)||a.getColor().equals(<span class="hljs-string">&quot;Red&quot;</span>));<br>        System.out.println(getRedApple(Arrays.asList(<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">150</span>,<span class="hljs-string">&quot;red&quot;</span>),<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">160</span>,<span class="hljs-string">&quot;green&quot;</span>),<span class="hljs-keyword">new</span> Apple(<span class="hljs-number">160</span>,<span class="hljs-string">&quot;red&quot;</span>)),p.negate()));<br>    &#125;<br><br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <blockquote>
 <p>[Apple{weight=160, color=’green’}]</p>
 </blockquote>
 <p>可以看到筛出了不是红苹果的。</p>
 <h2 id="函数复合"><a href="#函数复合" class="headerlink" title="函数复合"></a>函数复合</h2><p>最后，还可以把Function接口所代表的lambda表达式复合起来。接口有andThen和compose两个默认方法，都会返回一个Function实例。<br>andThen方法会返回一个函数，它先对输入应用一个给定函数，再对输出应用另一个函数。<br>但是注意<code>f.andThen(g)</code>代表着<strong>g(f(x))<strong>，即</strong>先执行f，再执行g</strong>，也符合andThen语义，<code>f.compose(g)</code>则是代表着<strong>f(g(x))<strong>，即</strong>f里复合g</strong>，也符合compose的语义。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Function&lt;Integer,Integer&gt; f = x -&gt; x + <span class="number">1</span>;</span><br><span class="line">        Function&lt;Integer,Integer&gt; g = x -&gt; <span class="number">2</span> * x;</span><br><span class="line">        Function&lt;Integer,Integer&gt; h = f.andThen(g);</span><br><span class="line">        Function&lt;Integer,Integer&gt; y = f.compose(g);</span><br><span class="line">        System.out.println(h.apply(<span class="number">1</span>));</span><br><span class="line">        System.out.println(y.apply(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><br><span class="hljs-keyword">import</span> java.util.function.Function;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Function&lt;Integer,Integer&gt; f = x -&gt; x + <span class="hljs-number">1</span>;<br>        Function&lt;Integer,Integer&gt; g = x -&gt; <span class="hljs-number">2</span> * x;<br>        Function&lt;Integer,Integer&gt; h = f.andThen(g);<br>        Function&lt;Integer,Integer&gt; y = f.compose(g);<br>        System.out.println(h.apply(<span class="hljs-number">1</span>));<br>        System.out.println(y.apply(<span class="hljs-number">1</span>));<br>    &#125;<br><br><br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>4<br>3</p>
 </blockquote>
 <p>这里h就是先把1加1，得到2，再乘2，得到4.而y呢是先执行g，先把1乘2得到2，再执行f，加1得到3。数学函数如此，可以类比把function泛型的各种类型输入得到的输出再做映射，比如我们得到了字符串长度，再+1。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T,R&gt; <span class="function">List&lt;R&gt; <span class="title">map</span><span class="params">(List&lt;T&gt; list, Function&lt;T,R&gt; f)</span></span>&#123;</span><br><span class="line">        List&lt;R&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(T l : list)&#123;</span><br><span class="line">            result.add(f.apply(l));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Function&lt;String,Integer&gt; f = String::length;</span><br><span class="line">        List&lt;Integer&gt; l = map(Arrays.asList(<span class="string">&quot;lambda&quot;</span>,<span class="string">&quot;in&quot;</span>,<span class="string">&quot;actions&quot;</span>), f.andThen(x -&gt; x+<span class="number">1</span>));</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.function.Function;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T,R&gt; <span class="hljs-function">List&lt;R&gt; <span class="hljs-title">map</span><span class="hljs-params">(List&lt;T&gt; list, Function&lt;T,R&gt; f)</span></span>&#123;<br>        List&lt;R&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">for</span>(T l : list)&#123;<br>            result.add(f.apply(l));<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Function&lt;String,Integer&gt; f = String::length;<br>        List&lt;Integer&gt; l = map(Arrays.asList(<span class="hljs-string">&quot;lambda&quot;</span>,<span class="hljs-string">&quot;in&quot;</span>,<span class="hljs-string">&quot;actions&quot;</span>), f.andThen(x -&gt; x+<span class="hljs-number">1</span>));<br>        System.out.println(l);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>输出结果</p>
 <blockquote>
 <p>[7, 3, 8]</p>
@@ -303,74 +361,377 @@
 </blockquote>
 <p>可以发现，进行函数复合可以加快编程效率，就是注意复合是复合lambda表达式，不要传入错的参数。</p>
 
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Java·Lambda表达式</div>
+      <div>http://example.com/2021/05/04/Java%C2%B7Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</div>
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/04/29/%E8%BF%99%E6%AC%A1%EF%BC%8C%E5%BD%BB%E5%BA%95%E5%BC%84%E6%87%82%E6%8E%A5%E5%8F%A3%E5%8F%8A%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="prev" title="这次，彻底弄懂接口及抽象类（转载）">
-                  <i class="fa fa-chevron-left"></i> 这次，彻底弄懂接口及抽象类（转载）
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2021/05/05/Java%C2%B7%E5%A4%9A%E7%BA%BF%E7%A8%8B%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="Java·多线程">
-                  Java·多线程 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-<script src="/js/comments.js"></script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">AHawkeye</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>AHawkeye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年5月4日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/05/05/Java%C2%B7%E5%A4%9A%E7%BA%BF%E7%A8%8B%C2%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" title="Java·多线程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java·多线程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/29/%E8%BF%99%E6%AC%A1%EF%BC%8C%E5%BD%BB%E5%BA%95%E5%BC%84%E6%87%82%E6%8E%A5%E5%8F%A3%E5%8F%8A%E6%8A%BD%E8%B1%A1%E7%B1%BB/" title="这次，彻底弄懂接口及抽象类（转载）">
+                        <span class="hidden-mobile">这次，彻底弄懂接口及抽象类（转载）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

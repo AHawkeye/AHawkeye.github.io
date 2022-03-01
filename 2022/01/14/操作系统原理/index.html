@@ -1,32 +1,28 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="概述   计算机操作系统 - 概述 基本特征 1. 并发 2. 共享 3. 虚拟 4. 异步   基本功能 1. 进程管理 2. 内存管理 3. 文件管理 4. 设备管理   系统调用 宏内核和微内核 1. 宏内核 2. 微内核   中断分类 1. 外中断 2. 异常 3. 陷入      基本特征1. 并发并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。 并行需要">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="AHawkeye">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="概述   计算机操作系统 - 概述 基本特征 1. 并发 2. 共享 3. 虚拟 4. 异步   基本功能 1. 进程管理 2. 内存管理 3. 文件管理 4. 设备管理   系统调用 宏内核和微内核 1. 宏内核 2. 微内核   中断分类 1. 外中断 2. 异常 3. 陷入      基本特征1. 并发并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。 并行需要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统原理">
 <meta property="og:url" content="http://example.com/2022/01/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="SOMETHING">
 <meta property="og:description" content="概述   计算机操作系统 - 概述 基本特征 1. 并发 2. 共享 3. 虚拟 4. 异步   基本功能 1. 进程管理 2. 内存管理 3. 文件管理 4. 设备管理   系统调用 宏内核和微内核 1. 宏内核 2. 微内核   中断分类 1. 外中断 2. 异常 3. 陷入      基本特征1. 并发并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。 并行需要">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/tGPV0.png">
 <meta property="og:image" content="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2_14_microkernelArchitecture.jpg">
 <meta property="og:image" content="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a6ac2b08-3861-4e85-baa8-382287bfee9f.png">
@@ -56,176 +52,244 @@
 <meta property="article:published_time" content="2022-01-14T10:35:34.000Z">
 <meta property="article:modified_time" content="2022-01-14T10:35:39.553Z">
 <meta property="article:author" content="AHawkeye">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/tGPV0.png">
+  
+  
+  <title>操作系统原理 - SOMETHING</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="http://example.com/2022/01/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;01&#x2F;14&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86&#x2F;&quot;,&quot;path&quot;:&quot;2022&#x2F;01&#x2F;14&#x2F;操作系统原理&#x2F;&quot;,&quot;title&quot;:&quot;操作系统原理&quot;}</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>操作系统原理 | SOMETHING</title><script src="/js/config.js"></script>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-    </div>
-  </div>
 
-  <div class="site-meta">
+<body>
+  
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">SOMETHING</h1>
-      <i class="logo-line"></i>
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-
-
-
-
-
-
-</div>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="操作系统原理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-01-14 18:35" pubdate>
+          2022年1月14日 晚上
+        </time>
+      </span>
+    
   </div>
 
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81"><span class="nav-number">1.1.</span> <span class="nav-text">基本特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%B9%B6%E5%8F%91"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%85%B1%E4%BA%AB"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 共享</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%99%9A%E6%8B%9F"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 虚拟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%BC%82%E6%AD%A5"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 异步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">基本功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 进程管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 内存管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 文件管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 设备管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">系统调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F%E5%86%85%E6%A0%B8%E5%92%8C%E5%BE%AE%E5%86%85%E6%A0%B8"><span class="nav-number">1.4.</span> <span class="nav-text">宏内核和微内核</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%8F%E5%86%85%E6%A0%B8"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 宏内核</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%BE%AE%E5%86%85%E6%A0%B8"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 微内核</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E5%88%86%E7%B1%BB"><span class="nav-number">1.5.</span> <span class="nav-text">中断分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%A4%96%E4%B8%AD%E6%96%AD"><span class="nav-number">1.5.1.</span> <span class="nav-text">1. 外中断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%BC%82%E5%B8%B8"><span class="nav-number">1.5.2.</span> <span class="nav-text">2. 异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%99%B7%E5%85%A5"><span class="nav-number">1.5.3.</span> <span class="nav-text">3. 陷入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">进程与线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%BF%9B%E7%A8%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">1. 进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BA%BF%E7%A8%8B"><span class="nav-number">2.1.2.</span> <span class="nav-text">2. 线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.1.3.</span> <span class="nav-text">3. 区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81%E7%9A%84%E5%88%87%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">进程状态的切换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-number">2.3.</span> <span class="nav-text">进程调度算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.3.1.</span> <span class="nav-text">1. 批处理系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.3.2.</span> <span class="nav-text">2. 交互式系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AE%9E%E6%97%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.3.3.</span> <span class="nav-text">3. 实时系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="nav-number">2.4.</span> <span class="nav-text">进程同步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%B4%E7%95%8C%E5%8C%BA"><span class="nav-number">2.4.1.</span> <span class="nav-text">1. 临界区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5"><span class="nav-number">2.4.2.</span> <span class="nav-text">2. 同步与互斥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="nav-number">2.4.3.</span> <span class="nav-text">3. 信号量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%AE%A1%E7%A8%8B"><span class="nav-number">2.4.4.</span> <span class="nav-text">4. 管程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">经典同步问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.1.</span> <span class="nav-text">1. 哲学家进餐问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AF%BB%E8%80%85-%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.2.</span> <span class="nav-text">2. 读者-写者问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="nav-number">2.6.</span> <span class="nav-text">进程通信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%AE%A1%E9%81%93"><span class="nav-number">2.6.1.</span> <span class="nav-text">1. 管道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-FIFO"><span class="nav-number">2.6.2.</span> <span class="nav-text">2. FIFO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="nav-number">2.6.3.</span> <span class="nav-text">3. 消息队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="nav-number">2.6.4.</span> <span class="nav-text">4. 信号量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%85%B1%E4%BA%AB%E5%AD%98%E5%82%A8"><span class="nav-number">2.6.5.</span> <span class="nav-text">5. 共享存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%A5%97%E6%8E%A5%E5%AD%97"><span class="nav-number">2.6.6.</span> <span class="nav-text">6. 套接字</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%BB%E9%94%81"><span class="nav-number">3.</span> <span class="nav-text">死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">必要条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">处理方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%B8%B5%E9%B8%9F%E7%AD%96%E7%95%A5"><span class="nav-number">3.3.</span> <span class="nav-text">鸵鸟策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E9%94%81%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%AD%BB%E9%94%81%E6%81%A2%E5%A4%8D"><span class="nav-number">3.4.</span> <span class="nav-text">死锁检测与死锁恢复</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%AF%8F%E7%A7%8D%E7%B1%BB%E5%9E%8B%E4%B8%80%E4%B8%AA%E8%B5%84%E6%BA%90%E7%9A%84%E6%AD%BB%E9%94%81%E6%A3%80%E6%B5%8B"><span class="nav-number">3.4.1.</span> <span class="nav-text">1. 每种类型一个资源的死锁检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%AF%8F%E7%A7%8D%E7%B1%BB%E5%9E%8B%E5%A4%9A%E4%B8%AA%E8%B5%84%E6%BA%90%E7%9A%84%E6%AD%BB%E9%94%81%E6%A3%80%E6%B5%8B"><span class="nav-number">3.4.2.</span> <span class="nav-text">2. 每种类型多个资源的死锁检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%AD%BB%E9%94%81%E6%81%A2%E5%A4%8D"><span class="nav-number">3.4.3.</span> <span class="nav-text">3. 死锁恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E9%94%81%E9%A2%84%E9%98%B2"><span class="nav-number">3.5.</span> <span class="nav-text">死锁预防</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%A0%B4%E5%9D%8F%E4%BA%92%E6%96%A5%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.5.1.</span> <span class="nav-text">1. 破坏互斥条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%A0%B4%E5%9D%8F%E5%8D%A0%E6%9C%89%E5%92%8C%E7%AD%89%E5%BE%85%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.5.2.</span> <span class="nav-text">2. 破坏占有和等待条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%A0%B4%E5%9D%8F%E4%B8%8D%E5%8F%AF%E6%8A%A2%E5%8D%A0%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.5.3.</span> <span class="nav-text">3. 破坏不可抢占条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%A0%B4%E5%9D%8F%E7%8E%AF%E8%B7%AF%E7%AD%89%E5%BE%85"><span class="nav-number">3.5.4.</span> <span class="nav-text">4. 破坏环路等待</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E9%94%81%E9%81%BF%E5%85%8D"><span class="nav-number">3.6.</span> <span class="nav-text">死锁避免</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E5%85%A8%E7%8A%B6%E6%80%81"><span class="nav-number">3.6.1.</span> <span class="nav-text">1. 安全状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8D%95%E4%B8%AA%E8%B5%84%E6%BA%90%E7%9A%84%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%AE%97%E6%B3%95"><span class="nav-number">3.6.2.</span> <span class="nav-text">2. 单个资源的银行家算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%A4%9A%E4%B8%AA%E8%B5%84%E6%BA%90%E7%9A%84%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%AE%97%E6%B3%95"><span class="nav-number">3.6.3.</span> <span class="nav-text">3. 多个资源的银行家算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-number">4.1.</span> <span class="nav-text">虚拟内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E7%B3%BB%E7%BB%9F%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84"><span class="nav-number">4.2.</span> <span class="nav-text">分页系统地址映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="nav-number">4.3.</span> <span class="nav-text">页面置换算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9C%80%E4%BD%B3"><span class="nav-number">4.3.1.</span> <span class="nav-text">1. 最佳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9C%80%E8%BF%91%E6%9C%80%E4%B9%85%E6%9C%AA%E4%BD%BF%E7%94%A8"><span class="nav-number">4.3.2.</span> <span class="nav-text">2. 最近最久未使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%9C%80%E8%BF%91%E6%9C%AA%E4%BD%BF%E7%94%A8"><span class="nav-number">4.3.3.</span> <span class="nav-text">3. 最近未使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%85%88%E8%BF%9B%E5%85%88%E5%87%BA"><span class="nav-number">4.3.4.</span> <span class="nav-text">4. 先进先出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%9C%BA%E4%BC%9A%E7%AE%97%E6%B3%95"><span class="nav-number">4.3.5.</span> <span class="nav-text">5. 第二次机会算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%97%B6%E9%92%9F"><span class="nav-number">4.3.6.</span> <span class="nav-text">6. 时钟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%AE%B5"><span class="nav-number">4.4.</span> <span class="nav-text">分段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E9%A1%B5%E5%BC%8F"><span class="nav-number">4.5.</span> <span class="nav-text">段页式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E4%B8%8E%E5%88%86%E6%AE%B5%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">4.6.</span> <span class="nav-text">分页与分段的比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">设备管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E7%BB%93%E6%9E%84"><span class="nav-number">5.1.</span> <span class="nav-text">磁盘结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">磁盘调度算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%88%E6%9D%A5%E5%85%88%E6%9C%8D%E5%8A%A1"><span class="nav-number">5.2.1.</span> <span class="nav-text">1. 先来先服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9C%80%E7%9F%AD%E5%AF%BB%E9%81%93%E6%97%B6%E9%97%B4%E4%BC%98%E5%85%88"><span class="nav-number">5.2.2.</span> <span class="nav-text">2. 最短寻道时间优先</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95"><span class="nav-number">5.2.3.</span> <span class="nav-text">3. 电梯算法</span></a></li></ol></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">AHawkeye</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          18k 字
+        
+      </span>
+    
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          150 分钟
+        
+      </span>
+    
+
+    
+    
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+        
+      </div>
 
-    <div class="main-inner post posts-expand">
+      
+    </div>
+  </div>
+</div>
 
+</div>
 
-  
+  </header>
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="AHawkeye">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SOMETHING">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          操作系统原理
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
+  <main>
+    
       
 
-      <time title="Created: 2022-01-14 18:35:34 / Modified: 18:35:39" itemprop="dateCreated datePublished" datetime="2022-01-14T18:35:34+08:00">2022-01-14</time>
-    </span>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
 
-  
-</div>
+    </div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><!-- GFM-TOC -->
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">操作系统原理</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><!-- GFM-TOC -->
 
 <ul>
 <li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F---%E6%A6%82%E8%BF%B0">计算机操作系统 - 概述</a><ul>
@@ -275,7 +339,7 @@
 <h3 id="4-设备管理"><a href="#4-设备管理" class="headerlink" title="4. 设备管理"></a>4. 设备管理</h3><p>完成用户的 I/O 请求，方便用户使用各种设备，并提高设备的利用率。</p>
 <p>主要包括缓冲管理、设备分配、设备处理、虛拟设备等。</p>
 <h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><p>如果一个进程在用户态需要使用内核态的功能，就进行系统调用从而陷入内核，由操作系统代为完成。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/tGPV0.png" width="600"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/tGPV0.png" srcset="/img/loading.gif" lazyload width="600"/> </div><br>
 
 <p>Linux 的系统调用主要有以下这些：</p>
 <table>
@@ -315,7 +379,7 @@
 <h3 id="2-微内核"><a href="#2-微内核" class="headerlink" title="2. 微内核"></a>2. 微内核</h3><p>由于操作系统不断复杂，因此将一部分操作系统功能移出内核，从而降低内核的复杂性。移出的部分根据分层的原则划分成若干服务，相互独立。</p>
 <p>在微内核结构下，操作系统被划分成小的、定义良好的模块，只有微内核这一个模块运行在内核态，其余模块运行在用户态。</p>
 <p>因为需要频繁地在用户态和核心态之间进行切换，所以会有一定的性能损失。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2_14_microkernelArchitecture.jpg"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2_14_microkernelArchitecture.jpg" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h2 id="中断分类"><a href="#中断分类" class="headerlink" title="中断分类"></a>中断分类</h2><h3 id="1-外中断"><a href="#1-外中断" class="headerlink" title="1. 外中断"></a>1. 外中断</h3><p>由 CPU 执行指令以外的事件引起，如 I/O 完成中断，表示设备输入/输出处理已经完成，处理器能够发送下一个输入/输出请求。此外还有时钟中断、控制台中断等。</p>
 <h3 id="2-异常"><a href="#2-异常" class="headerlink" title="2. 异常"></a>2. 异常</h3><p>由 CPU 执行指令的内部事件引起，如非法操作码、地址越界、算术溢出等。</p>
@@ -364,12 +428,12 @@
 <h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><h3 id="1-进程"><a href="#1-进程" class="headerlink" title="1. 进程"></a>1. 进程</h3><p>进程是资源分配的基本单位。</p>
 <p>进程控制块 (Process Control Block, PCB) 描述进程的基本信息和运行状态，所谓的创建进程和撤销进程，都是指对 PCB 的操作。</p>
 <p>下图显示了 4 个程序创建了 4 个进程，这 4 个进程可以并发地执行。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a6ac2b08-3861-4e85-baa8-382287bfee9f.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a6ac2b08-3861-4e85-baa8-382287bfee9f.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="2-线程"><a href="#2-线程" class="headerlink" title="2. 线程"></a>2. 线程</h3><p>线程是独立调度的基本单位。</p>
 <p>一个进程中可以有多个线程，它们共享进程资源。</p>
 <p>QQ 和浏览器是两个进程，浏览器进程里面有很多线程，例如 HTTP 请求线程、事件响应线程、渲染线程等等，线程的并发执行使得在浏览器中点击一个新链接从而发起 HTTP 请求时，浏览器还可以响应用户的其它事件。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/3cd630ea-017c-488d-ad1d-732b4efeddf5.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/3cd630ea-017c-488d-ad1d-732b4efeddf5.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="3-区别"><a href="#3-区别" class="headerlink" title="3. 区别"></a>3. 区别</h3><p>Ⅰ 拥有资源</p>
 <p>进程是资源分配的基本单位，但是线程不拥有资源，线程可以访问隶属进程的资源。</p>
@@ -379,7 +443,7 @@
 <p>由于创建或撤销进程时，系统都要为之分配或回收资源，如内存空间、I/O 设备等，所付出的开销远大于创建或撤销线程时的开销。类似地，在进行进程切换时，涉及当前执行进程 CPU 环境的保存及新调度进程 CPU 环境的设置，而线程切换时只需保存和设置少量寄存器内容，开销很小。</p>
 <p>Ⅳ 通信方面</p>
 <p>线程间可以通过直接读写同一进程中的数据进行通信，但是进程通信需要借助 IPC。</p>
-<h2 id="进程状态的切换"><a href="#进程状态的切换" class="headerlink" title="进程状态的切换"></a>进程状态的切换</h2><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ProcessState.png" width="500"/> </div><br>
+<h2 id="进程状态的切换"><a href="#进程状态的切换" class="headerlink" title="进程状态的切换"></a>进程状态的切换</h2><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ProcessState.png" srcset="/img/loading.gif" lazyload width="500"/> </div><br>
 
 <ul>
 <li>就绪状态（ready）：等待被调度</li>
@@ -409,7 +473,7 @@
 <li>因为进程切换都要保存进程的信息并且载入新进程的信息，如果时间片太小，会导致进程切换得太频繁，在进程切换上就会花过多时间。</li>
 <li>而如果时间片过长，那么实时性就不能得到保证。</li>
 </ul>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/8c662999-c16c-481c-9f40-1fdba5bc9167.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/8c662999-c16c-481c-9f40-1fdba5bc9167.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p><strong>2.2 优先级调度</strong>  </p>
 <p>为每个进程分配一个优先级，按优先级进行调度。</p>
@@ -419,13 +483,13 @@
 <p>多级队列是为这种需要连续执行多个时间片的进程考虑，它设置了多个队列，每个队列时间片大小都不同，例如 1,2,4,8,..。进程在第一个队列没执行完，就会被移到下一个队列。这种方式下，之前的进程只需要交换 7 次。</p>
 <p>每个队列优先权也不同，最上面的优先权最高。因此只有上一个队列没有进程在排队，才能调度当前队列上的进程。</p>
 <p>可以将这种调度算法看成是时间片轮转调度算法和优先级调度算法的结合。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/042cf928-3c8e-4815-ae9c-f2780202c68f.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/042cf928-3c8e-4815-ae9c-f2780202c68f.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="3-实时系统"><a href="#3-实时系统" class="headerlink" title="3. 实时系统"></a>3. 实时系统</h3><p>实时系统要求一个请求在一个确定时间内得到响应。</p>
 <p>分为硬实时和软实时，前者必须满足绝对的截止时间，后者可以容忍一定的超时。</p>
 <h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><h3 id="1-临界区"><a href="#1-临界区" class="headerlink" title="1. 临界区"></a>1. 临界区</h3><p>对临界资源进行访问的那段代码称为临界区。</p>
 <p>为了互斥访问临界资源，每个进程在进入临界区之前，需要先进行检查。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// entry section</span><br><span class="line">// critical section;</span><br><span class="line">// exit section</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html">// entry section<br>// critical section;<br>// exit section<br></code></pre></td></tr></table></figure>
 
 <h3 id="2-同步与互斥"><a href="#2-同步与互斥" class="headerlink" title="2. 同步与互斥"></a>2. 同步与互斥</h3><ul>
 <li>同步：多个进程因为合作产生的直接制约关系，使得进程有一定的先后执行关系。</li>
@@ -438,49 +502,49 @@
 </ul>
 <p>down 和 up 操作需要被设计成原语，不可分割，通常的做法是在执行这些操作的时候屏蔽中断。</p>
 <p>如果信号量的取值只能为 0 或者 1，那么就成为了   <strong>互斥量（Mutex）</strong>  ，0 表示临界区已经加锁，1 表示临界区解锁。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> semaphore;</span><br><span class="line">semaphore mutex = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">P1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    down(&amp;mutex);</span><br><span class="line">    <span class="comment">// 临界区</span></span><br><span class="line">    up(&amp;mutex);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">P2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    down(&amp;mutex);</span><br><span class="line">    <span class="comment">// 临界区</span></span><br><span class="line">    up(&amp;mutex);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> semaphore;<br>semaphore mutex = <span class="hljs-number">1</span>;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">P1</span><span class="hljs-params">()</span> </span>&#123;<br>    down(&amp;mutex);<br>    <span class="hljs-comment">// 临界区</span><br>    up(&amp;mutex);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">P2</span><span class="hljs-params">()</span> </span>&#123;<br>    down(&amp;mutex);<br>    <span class="hljs-comment">// 临界区</span><br>    up(&amp;mutex);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>&lt;font size=3&gt;   <strong>使用信号量实现生产者-消费者问题</strong>   &lt;/font&gt; &lt;/br&gt;</p>
 <p>问题描述：使用一个缓冲区来保存物品，只有缓冲区没有满，生产者才可以放入物品；只有缓冲区不为空，消费者才可以拿走物品。</p>
 <p>因为缓冲区属于临界资源，因此需要使用一个互斥量 mutex 来控制对缓冲区的互斥访问。</p>
 <p>为了同步生产者和消费者的行为，需要记录缓冲区中物品的数量。数量可以使用信号量来进行统计，这里需要使用两个信号量：empty 记录空缓冲区的数量，full 记录满缓冲区的数量。其中，empty 信号量是在生产者进程中使用，当 empty 不为 0 时，生产者才可以放入物品；full 信号量是在消费者进程中使用，当 full 信号量不为 0 时，消费者才可以取走物品。</p>
 <p>注意，不能先对缓冲区进行加锁，再测试信号量。也就是说，不能先执行 down(mutex) 再执行 down(empty)。如果这么做了，那么可能会出现这种情况：生产者对缓冲区加锁后，执行 down(empty) 操作，发现 empty = 0，此时生产者睡眠。消费者不能进入临界区，因为生产者对缓冲区加锁了，消费者就无法执行 up(empty) 操作，empty 永远都为 0，导致生产者永远等待下，不会释放锁，消费者因此也会永远等待下去。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> semaphore;</span><br><span class="line">semaphore mutex = <span class="number">1</span>;</span><br><span class="line">semaphore empty = N;</span><br><span class="line">semaphore full = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">producer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        <span class="keyword">int</span> item = produce_item();</span><br><span class="line">        down(&amp;empty);</span><br><span class="line">        down(&amp;mutex);</span><br><span class="line">        insert_item(item);</span><br><span class="line">        up(&amp;mutex);</span><br><span class="line">        up(&amp;full);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">consumer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        down(&amp;full);</span><br><span class="line">        down(&amp;mutex);</span><br><span class="line">        <span class="keyword">int</span> item = remove_item();</span><br><span class="line">        consume_item(item);</span><br><span class="line">        up(&amp;mutex);</span><br><span class="line">        up(&amp;empty);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> N 100</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> semaphore;<br>semaphore mutex = <span class="hljs-number">1</span>;<br>semaphore empty = N;<br>semaphore full = <span class="hljs-number">0</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">producer</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(TRUE) &#123;<br>        <span class="hljs-keyword">int</span> item = produce_item();<br>        down(&amp;empty);<br>        down(&amp;mutex);<br>        insert_item(item);<br>        up(&amp;mutex);<br>        up(&amp;full);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">consumer</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(TRUE) &#123;<br>        down(&amp;full);<br>        down(&amp;mutex);<br>        <span class="hljs-keyword">int</span> item = remove_item();<br>        consume_item(item);<br>        up(&amp;mutex);<br>        up(&amp;empty);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="4-管程"><a href="#4-管程" class="headerlink" title="4. 管程"></a>4. 管程</h3><p>使用信号量机制实现的生产者消费者问题需要客户端代码做很多控制，而管程把控制的代码独立出来，不仅不容易出错，也使得客户端代码调用更容易。</p>
 <p>c 语言不支持管程，下面的示例代码使用了类 Pascal 语言来描述管程。示例代码的管程提供了 insert() 和 remove() 方法，客户端代码通过调用这两个方法来解决生产者-消费者问题。</p>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">monitor ProducerConsumer</span><br><span class="line">    integer i;</span><br><span class="line">    condition c;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">procedure</span> <span class="title">insert</span><span class="params">()</span>;</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">procedure</span> <span class="title">remove</span><span class="params">()</span>;</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line"><span class="keyword">end</span> monitor;</span><br></pre></td></tr></table></figure>
+<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs pascal">monitor ProducerConsumer<br>    integer i;<br>    condition c;<br><br>    <span class="hljs-function"><span class="hljs-keyword">procedure</span> <span class="hljs-title">insert</span><span class="hljs-params">()</span>;</span><br>    <span class="hljs-keyword">begin</span><br>        <span class="hljs-comment">// ...</span><br>    <span class="hljs-keyword">end</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">procedure</span> <span class="hljs-title">remove</span><span class="hljs-params">()</span>;</span><br>    <span class="hljs-keyword">begin</span><br>        <span class="hljs-comment">// ...</span><br>    <span class="hljs-keyword">end</span>;<br><span class="hljs-keyword">end</span> monitor;<br></code></pre></td></tr></table></figure>
 
 <p>管程有一个重要特性：在一个时刻只能有一个进程使用管程。进程在无法继续执行的时候不能一直占用管程，否则其它进程永远不能使用管程。</p>
 <p>管程引入了   <strong>条件变量</strong>   以及相关的操作：<strong>wait()</strong> 和 <strong>signal()</strong> 来实现同步操作。对条件变量执行 wait() 操作会导致调用进程阻塞，把管程让出来给另一个进程持有。signal() 操作用于唤醒被阻塞的进程。</p>
 <p><font size=3>  <strong>使用管程实现生产者-消费者问题</strong>  </font><br></p>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 管程</span></span><br><span class="line">monitor ProducerConsumer</span><br><span class="line">    condition full, empty;</span><br><span class="line">    integer count := <span class="number">0</span>;</span><br><span class="line">    condition c;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">procedure</span> <span class="title">insert</span><span class="params">(item: integer)</span>;</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span> count = N <span class="keyword">then</span> wait(full);</span><br><span class="line">        insert_item(item);</span><br><span class="line">        count := count + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> count = <span class="number">1</span> <span class="keyword">then</span> signal(empty);</span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">remove</span>:</span> integer;</span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span> count = <span class="number">0</span> <span class="keyword">then</span> wait(empty);</span><br><span class="line">        remove = remove_item;</span><br><span class="line">        count := count - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> count = N -<span class="number">1</span> <span class="keyword">then</span> signal(full);</span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line"><span class="keyword">end</span> monitor;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生产者客户端</span></span><br><span class="line"><span class="function"><span class="keyword">procedure</span> <span class="title">producer</span></span></span><br><span class="line"><span class="function"><span class="title">begin</span></span></span><br><span class="line"><span class="function">    <span class="title">while</span> <span class="title">true</span> <span class="title">do</span></span></span><br><span class="line"><span class="function">    <span class="title">begin</span></span></span><br><span class="line"><span class="function">        <span class="title">item</span> = <span class="title">produce_item</span>;</span></span><br><span class="line">        ProducerConsumer.insert(item);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 消费者客户端</span></span><br><span class="line"><span class="function"><span class="keyword">procedure</span> <span class="title">consumer</span></span></span><br><span class="line"><span class="function"><span class="title">begin</span></span></span><br><span class="line"><span class="function">    <span class="title">while</span> <span class="title">true</span> <span class="title">do</span></span></span><br><span class="line"><span class="function">    <span class="title">begin</span></span></span><br><span class="line"><span class="function">        <span class="title">item</span> = <span class="title">ProducerConsumer</span>.<span class="title">remove</span>;</span></span><br><span class="line">        consume_item(item);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs pascal"><span class="hljs-comment">// 管程</span><br>monitor ProducerConsumer<br>    condition full, empty;<br>    integer count := <span class="hljs-number">0</span>;<br>    condition c;<br><br>    <span class="hljs-function"><span class="hljs-keyword">procedure</span> <span class="hljs-title">insert</span><span class="hljs-params">(item: integer)</span>;</span><br>    <span class="hljs-keyword">begin</span><br>        <span class="hljs-keyword">if</span> count = N <span class="hljs-keyword">then</span> wait(full);<br>        insert_item(item);<br>        count := count + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">if</span> count = <span class="hljs-number">1</span> <span class="hljs-keyword">then</span> signal(empty);<br>    <span class="hljs-keyword">end</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remove</span>:</span> integer;<br>    <span class="hljs-keyword">begin</span><br>        <span class="hljs-keyword">if</span> count = <span class="hljs-number">0</span> <span class="hljs-keyword">then</span> wait(empty);<br>        remove = remove_item;<br>        count := count - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">if</span> count = N -<span class="hljs-number">1</span> <span class="hljs-keyword">then</span> signal(full);<br>    <span class="hljs-keyword">end</span>;<br><span class="hljs-keyword">end</span> monitor;<br><br><span class="hljs-comment">// 生产者客户端</span><br><span class="hljs-function"><span class="hljs-keyword">procedure</span> <span class="hljs-title">producer</span></span><br><span class="hljs-function"><span class="hljs-title">begin</span></span><br><span class="hljs-function">    <span class="hljs-title">while</span> <span class="hljs-title">true</span> <span class="hljs-title">do</span></span><br><span class="hljs-function">    <span class="hljs-title">begin</span></span><br><span class="hljs-function">        <span class="hljs-title">item</span> = <span class="hljs-title">produce_item</span>;</span><br>        ProducerConsumer.insert(item);<br>    <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span>;<br><br><span class="hljs-comment">// 消费者客户端</span><br><span class="hljs-function"><span class="hljs-keyword">procedure</span> <span class="hljs-title">consumer</span></span><br><span class="hljs-function"><span class="hljs-title">begin</span></span><br><span class="hljs-function">    <span class="hljs-title">while</span> <span class="hljs-title">true</span> <span class="hljs-title">do</span></span><br><span class="hljs-function">    <span class="hljs-title">begin</span></span><br><span class="hljs-function">        <span class="hljs-title">item</span> = <span class="hljs-title">ProducerConsumer</span>.<span class="hljs-title">remove</span>;</span><br>        consume_item(item);<br>    <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span>;<br></code></pre></td></tr></table></figure>
 
 <h2 id="经典同步问题"><a href="#经典同步问题" class="headerlink" title="经典同步问题"></a>经典同步问题</h2><p>生产者和消费者问题前面已经讨论过了。</p>
-<h3 id="1-哲学家进餐问题"><a href="#1-哲学家进餐问题" class="headerlink" title="1. 哲学家进餐问题"></a>1. 哲学家进餐问题</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a9077f06-7584-4f2b-8c20-3a8e46928820.jpg"/> </div><br>
+<h3 id="1-哲学家进餐问题"><a href="#1-哲学家进餐问题" class="headerlink" title="1. 哲学家进餐问题"></a>1. 哲学家进餐问题</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a9077f06-7584-4f2b-8c20-3a8e46928820.jpg" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>五个哲学家围着一张圆桌，每个哲学家面前放着食物。哲学家的生活有两种交替活动：吃饭以及思考。当一个哲学家吃饭时，需要先拿起自己左右两边的两根筷子，并且一次只能拿起一根筷子。</p>
 <p>下面是一种错误的解法，如果所有哲学家同时拿起左手边的筷子，那么所有哲学家都在等待其它哲学家吃完并释放自己手中的筷子，导致死锁。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 5</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">philosopher</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        think();</span><br><span class="line">        take(i);       <span class="comment">// 拿起左边的筷子</span></span><br><span class="line">        take((i+<span class="number">1</span>)%N); <span class="comment">// 拿起右边的筷子</span></span><br><span class="line">        eat();</span><br><span class="line">        put(i);</span><br><span class="line">        put((i+<span class="number">1</span>)%N);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> N 5</span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">philosopher</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(TRUE) &#123;<br>        think();<br>        take(i);       <span class="hljs-comment">// 拿起左边的筷子</span><br>        take((i+<span class="hljs-number">1</span>)%N); <span class="hljs-comment">// 拿起右边的筷子</span><br>        eat();<br>        put(i);<br>        put((i+<span class="hljs-number">1</span>)%N);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>为了防止死锁的发生，可以设置两个条件：</p>
 <ul>
 <li>必须同时拿起左右两根筷子；</li>
 <li>只有在两个邻居都没有进餐的情况下才允许进餐。</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LEFT (i + N - 1) % N <span class="comment">// 左邻居</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RIGHT (i + 1) % N    <span class="comment">// 右邻居</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> THINKING 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> HUNGRY   1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EATING   2</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> semaphore;</span><br><span class="line"><span class="keyword">int</span> state[N];                <span class="comment">// 跟踪每个哲学家的状态</span></span><br><span class="line">semaphore mutex = <span class="number">1</span>;         <span class="comment">// 临界区的互斥，临界区是 state 数组，对其修改需要互斥</span></span><br><span class="line">semaphore s[N];              <span class="comment">// 每个哲学家一个信号量</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">philosopher</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        think(i);</span><br><span class="line">        take_two(i);</span><br><span class="line">        eat(i);</span><br><span class="line">        put_two(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">take_two</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    down(&amp;mutex);</span><br><span class="line">    state[i] = HUNGRY;</span><br><span class="line">    check(i);</span><br><span class="line">    up(&amp;mutex);</span><br><span class="line">    down(&amp;s[i]); <span class="comment">// 只有收到通知之后才可以开始吃，否则会一直等下去</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">put_two</span><span class="params">(i)</span> </span>&#123;</span><br><span class="line">    down(&amp;mutex);</span><br><span class="line">    state[i] = THINKING;</span><br><span class="line">    check(LEFT); <span class="comment">// 尝试通知左右邻居，自己吃完了，你们可以开始吃了</span></span><br><span class="line">    check(RIGHT);</span><br><span class="line">    up(&amp;mutex);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    down(&amp;mutex);</span><br><span class="line">    state[i] = EATING;</span><br><span class="line">    up(&amp;mutex);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查两个邻居是否都没有用餐，如果是的话，就 up(&amp;s[i])，使得 down(&amp;s[i]) 能够得到通知并继续执行</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">check</span><span class="params">(i)</span> </span>&#123;         </span><br><span class="line">    <span class="keyword">if</span>(state[i] == HUNGRY &amp;&amp; state[LEFT] != EATING &amp;&amp; state[RIGHT] !=EATING) &#123;</span><br><span class="line">        state[i] = EATING;</span><br><span class="line">        up(&amp;s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> N 5</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LEFT (i + N - 1) % N <span class="hljs-comment">// 左邻居</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> RIGHT (i + 1) % N    <span class="hljs-comment">// 右邻居</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> THINKING 0</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> HUNGRY   1</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> EATING   2</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> semaphore;<br><span class="hljs-keyword">int</span> state[N];                <span class="hljs-comment">// 跟踪每个哲学家的状态</span><br>semaphore mutex = <span class="hljs-number">1</span>;         <span class="hljs-comment">// 临界区的互斥，临界区是 state 数组，对其修改需要互斥</span><br>semaphore s[N];              <span class="hljs-comment">// 每个哲学家一个信号量</span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">philosopher</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(TRUE) &#123;<br>        think(i);<br>        take_two(i);<br>        eat(i);<br>        put_two(i);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">take_two</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>    down(&amp;mutex);<br>    state[i] = HUNGRY;<br>    check(i);<br>    up(&amp;mutex);<br>    down(&amp;s[i]); <span class="hljs-comment">// 只有收到通知之后才可以开始吃，否则会一直等下去</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">put_two</span><span class="hljs-params">(i)</span> </span>&#123;<br>    down(&amp;mutex);<br>    state[i] = THINKING;<br>    check(LEFT); <span class="hljs-comment">// 尝试通知左右邻居，自己吃完了，你们可以开始吃了</span><br>    check(RIGHT);<br>    up(&amp;mutex);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>    down(&amp;mutex);<br>    state[i] = EATING;<br>    up(&amp;mutex);<br>&#125;<br><br><span class="hljs-comment">// 检查两个邻居是否都没有用餐，如果是的话，就 up(&amp;s[i])，使得 down(&amp;s[i]) 能够得到通知并继续执行</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">check</span><span class="hljs-params">(i)</span> </span>&#123;         <br>    <span class="hljs-keyword">if</span>(state[i] == HUNGRY &amp;&amp; state[LEFT] != EATING &amp;&amp; state[RIGHT] !=EATING) &#123;<br>        state[i] = EATING;<br>        up(&amp;s[i]);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="2-读者-写者问题"><a href="#2-读者-写者问题" class="headerlink" title="2. 读者-写者问题"></a>2. 读者-写者问题</h3><p>允许多个进程同时对数据进行读操作，但是不允许读和写以及写和写操作同时发生。</p>
 <p>一个整型变量 count 记录在对数据进行读操作的进程数量，一个互斥量 count_mutex 用于对 count 加锁，一个互斥量 data_mutex 用于对读写的数据加锁。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> semaphore;</span><br><span class="line">semaphore count_mutex = <span class="number">1</span>;</span><br><span class="line">semaphore data_mutex = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reader</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        down(&amp;count_mutex);</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">if</span>(count == <span class="number">1</span>) down(&amp;data_mutex); <span class="comment">// 第一个读者需要对数据进行加锁，防止写进程访问</span></span><br><span class="line">        up(&amp;count_mutex);</span><br><span class="line">        read();</span><br><span class="line">        down(&amp;count_mutex);</span><br><span class="line">        count--;</span><br><span class="line">        <span class="keyword">if</span>(count == <span class="number">0</span>) up(&amp;data_mutex);</span><br><span class="line">        up(&amp;count_mutex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(TRUE) &#123;</span><br><span class="line">        down(&amp;data_mutex);</span><br><span class="line">        write();</span><br><span class="line">        up(&amp;data_mutex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> semaphore;<br>semaphore count_mutex = <span class="hljs-number">1</span>;<br>semaphore data_mutex = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">reader</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(TRUE) &#123;<br>        down(&amp;count_mutex);<br>        count++;<br>        <span class="hljs-keyword">if</span>(count == <span class="hljs-number">1</span>) down(&amp;data_mutex); <span class="hljs-comment">// 第一个读者需要对数据进行加锁，防止写进程访问</span><br>        up(&amp;count_mutex);<br>        read();<br>        down(&amp;count_mutex);<br>        count--;<br>        <span class="hljs-keyword">if</span>(count == <span class="hljs-number">0</span>) up(&amp;data_mutex);<br>        up(&amp;count_mutex);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">writer</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(TRUE) &#123;<br>        down(&amp;data_mutex);<br>        write();<br>        up(&amp;data_mutex);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>以下内容由 <a target="_blank" rel="noopener" href="https://github.com/yugandharbandi">@Bandi Yugandhar</a> 提供。</p>
 <p>The first case may result Writer to starve. This case favous Writers i.e no writer, once added to the queue, shall be kept waiting longer than absolutely necessary(only when there are readers that entered the queue before the writer).</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> readcount, writecount;                   <span class="comment">//(initial value = 0)</span></span><br><span class="line">semaphore rmutex, wmutex, readLock, resource; <span class="comment">//(initial value = 1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//READER</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reader</span><span class="params">()</span> </span>&#123;</span><br><span class="line">&lt;ENTRY Section&gt;</span><br><span class="line"> down(&amp;readLock);                 <span class="comment">//  reader is trying to enter</span></span><br><span class="line"> down(&amp;rmutex);                  <span class="comment">//   lock to increase readcount</span></span><br><span class="line">  readcount++;                 </span><br><span class="line">  <span class="keyword">if</span> (readcount == <span class="number">1</span>)          </span><br><span class="line">   down(&amp;resource);              <span class="comment">//if you are the first reader then lock  the resource</span></span><br><span class="line"> up(&amp;rmutex);                  <span class="comment">//release  for other readers</span></span><br><span class="line"> up(&amp;readLock);                 <span class="comment">//Done with trying to access the resource</span></span><br><span class="line"></span><br><span class="line">&lt;CRITICAL Section&gt;</span><br><span class="line"><span class="comment">//reading is performed</span></span><br><span class="line"></span><br><span class="line">&lt;EXIT Section&gt;</span><br><span class="line"> down(&amp;rmutex);                  <span class="comment">//reserve exit section - avoids race condition with readers</span></span><br><span class="line"> readcount--;                       <span class="comment">//indicate you&#x27;re leaving</span></span><br><span class="line">  <span class="keyword">if</span> (readcount == <span class="number">0</span>)          <span class="comment">//checks if you are last reader leaving</span></span><br><span class="line">   up(&amp;resource);              <span class="comment">//if last, you must release the locked resource</span></span><br><span class="line"> up(&amp;rmutex);                  <span class="comment">//release exit section for other readers</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//WRITER</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  &lt;ENTRY Section&gt;</span><br><span class="line">  down(&amp;wmutex);                  <span class="comment">//reserve entry section for writers - avoids race conditions</span></span><br><span class="line">  writecount++;                <span class="comment">//report yourself as a writer entering</span></span><br><span class="line">  <span class="keyword">if</span> (writecount == <span class="number">1</span>)         <span class="comment">//checks if you&#x27;re first writer</span></span><br><span class="line">   down(&amp;readLock);               <span class="comment">//if you&#x27;re first, then you must lock the readers out. Prevent them from trying to enter CS</span></span><br><span class="line">  up(&amp;wmutex);                  <span class="comment">//release entry section</span></span><br><span class="line"></span><br><span class="line">&lt;CRITICAL Section&gt;</span><br><span class="line"> down(&amp;resource);                <span class="comment">//reserve the resource for yourself - prevents other writers from simultaneously editing the shared resource</span></span><br><span class="line">  <span class="comment">//writing is performed</span></span><br><span class="line"> up(&amp;resource);                <span class="comment">//release file</span></span><br><span class="line"></span><br><span class="line">&lt;EXIT Section&gt;</span><br><span class="line">  down(&amp;wmutex);                  <span class="comment">//reserve exit section</span></span><br><span class="line">  writecount--;                <span class="comment">//indicate you&#x27;re leaving</span></span><br><span class="line">  <span class="keyword">if</span> (writecount == <span class="number">0</span>)         <span class="comment">//checks if you&#x27;re the last writer</span></span><br><span class="line">   up(&amp;readLock);               <span class="comment">//if you&#x27;re last writer, you must unlock the readers. Allows them to try enter CS for reading</span></span><br><span class="line">  up(&amp;wmutex);                  <span class="comment">//release exit section</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">int</span> readcount, writecount;                   <span class="hljs-comment">//(initial value = 0)</span><br>semaphore rmutex, wmutex, readLock, resource; <span class="hljs-comment">//(initial value = 1)</span><br><br><span class="hljs-comment">//READER</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">reader</span><span class="hljs-params">()</span> </span>&#123;<br>&lt;ENTRY Section&gt;<br> down(&amp;readLock);                 <span class="hljs-comment">//  reader is trying to enter</span><br> down(&amp;rmutex);                  <span class="hljs-comment">//   lock to increase readcount</span><br>  readcount++;                 <br>  <span class="hljs-keyword">if</span> (readcount == <span class="hljs-number">1</span>)          <br>   down(&amp;resource);              <span class="hljs-comment">//if you are the first reader then lock  the resource</span><br> up(&amp;rmutex);                  <span class="hljs-comment">//release  for other readers</span><br> up(&amp;readLock);                 <span class="hljs-comment">//Done with trying to access the resource</span><br><br>&lt;CRITICAL Section&gt;<br><span class="hljs-comment">//reading is performed</span><br><br>&lt;EXIT Section&gt;<br> down(&amp;rmutex);                  <span class="hljs-comment">//reserve exit section - avoids race condition with readers</span><br> readcount--;                       <span class="hljs-comment">//indicate you&#x27;re leaving</span><br>  <span class="hljs-keyword">if</span> (readcount == <span class="hljs-number">0</span>)          <span class="hljs-comment">//checks if you are last reader leaving</span><br>   up(&amp;resource);              <span class="hljs-comment">//if last, you must release the locked resource</span><br> up(&amp;rmutex);                  <span class="hljs-comment">//release exit section for other readers</span><br>&#125;<br><br><span class="hljs-comment">//WRITER</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">writer</span><span class="hljs-params">()</span> </span>&#123;<br>  &lt;ENTRY Section&gt;<br>  down(&amp;wmutex);                  <span class="hljs-comment">//reserve entry section for writers - avoids race conditions</span><br>  writecount++;                <span class="hljs-comment">//report yourself as a writer entering</span><br>  <span class="hljs-keyword">if</span> (writecount == <span class="hljs-number">1</span>)         <span class="hljs-comment">//checks if you&#x27;re first writer</span><br>   down(&amp;readLock);               <span class="hljs-comment">//if you&#x27;re first, then you must lock the readers out. Prevent them from trying to enter CS</span><br>  up(&amp;wmutex);                  <span class="hljs-comment">//release entry section</span><br><br>&lt;CRITICAL Section&gt;<br> down(&amp;resource);                <span class="hljs-comment">//reserve the resource for yourself - prevents other writers from simultaneously editing the shared resource</span><br>  <span class="hljs-comment">//writing is performed</span><br> up(&amp;resource);                <span class="hljs-comment">//release file</span><br><br>&lt;EXIT Section&gt;<br>  down(&amp;wmutex);                  <span class="hljs-comment">//reserve exit section</span><br>  writecount--;                <span class="hljs-comment">//indicate you&#x27;re leaving</span><br>  <span class="hljs-keyword">if</span> (writecount == <span class="hljs-number">0</span>)         <span class="hljs-comment">//checks if you&#x27;re the last writer</span><br>   up(&amp;readLock);               <span class="hljs-comment">//if you&#x27;re last writer, you must unlock the readers. Allows them to try enter CS for reading</span><br>  up(&amp;wmutex);                  <span class="hljs-comment">//release exit section</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>We can observe that every reader is forced to acquire ReadLock. On the otherhand, writers doesn’t need to lock individually. Once the first writer locks the ReadLock, it will be released only when there is no writer left in the queue.</p>
 <p>From the both cases we observed that either reader or writer has to starve. Below solutionadds the constraint that no thread shall be allowed to starve; that is, the operation of obtaining a lock on the shared data will always terminate in a bounded amount of time.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">int readCount;                  &#x2F;&#x2F; init to 0; number of readers currently accessing resource</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; all semaphores initialised to 1</span><br><span class="line">Semaphore resourceAccess;       &#x2F;&#x2F; controls access (read&#x2F;write) to the resource</span><br><span class="line">Semaphore readCountAccess;      &#x2F;&#x2F; for syncing changes to shared variable readCount</span><br><span class="line">Semaphore serviceQueue;         &#x2F;&#x2F; FAIRNESS: preserves ordering of requests (signaling must be FIFO)</span><br><span class="line"></span><br><span class="line">void writer()</span><br><span class="line">&#123; </span><br><span class="line">    down(&amp;serviceQueue);           &#x2F;&#x2F; wait in line to be servicexs</span><br><span class="line">    &#x2F;&#x2F; &lt;ENTER&gt;</span><br><span class="line">    down(&amp;resourceAccess);         &#x2F;&#x2F; request exclusive access to resource</span><br><span class="line">    &#x2F;&#x2F; &lt;&#x2F;ENTER&gt;</span><br><span class="line">    up(&amp;serviceQueue);           &#x2F;&#x2F; let next in line be serviced</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; &lt;WRITE&gt;</span><br><span class="line">    writeResource();            &#x2F;&#x2F; writing is performed</span><br><span class="line">    &#x2F;&#x2F; &lt;&#x2F;WRITE&gt;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; &lt;EXIT&gt;</span><br><span class="line">    up(&amp;resourceAccess);         &#x2F;&#x2F; release resource access for next reader&#x2F;writer</span><br><span class="line">    &#x2F;&#x2F; &lt;&#x2F;EXIT&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void reader()</span><br><span class="line">&#123; </span><br><span class="line">    down(&amp;serviceQueue);           &#x2F;&#x2F; wait in line to be serviced</span><br><span class="line">    down(&amp;readCountAccess);        &#x2F;&#x2F; request exclusive access to readCount</span><br><span class="line">    &#x2F;&#x2F; &lt;ENTER&gt;</span><br><span class="line">    if (readCount &#x3D;&#x3D; 0)         &#x2F;&#x2F; if there are no readers already reading:</span><br><span class="line">        down(&amp;resourceAccess);     &#x2F;&#x2F; request resource access for readers (writers blocked)</span><br><span class="line">    readCount++;                &#x2F;&#x2F; update count of active readers</span><br><span class="line">    &#x2F;&#x2F; &lt;&#x2F;ENTER&gt;</span><br><span class="line">    up(&amp;serviceQueue);           &#x2F;&#x2F; let next in line be serviced</span><br><span class="line">    up(&amp;readCountAccess);        &#x2F;&#x2F; release access to readCount</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; &lt;READ&gt;</span><br><span class="line">    readResource();             &#x2F;&#x2F; reading is performed</span><br><span class="line">    &#x2F;&#x2F; &lt;&#x2F;READ&gt;</span><br><span class="line"></span><br><span class="line">    down(&amp;readCountAccess);        &#x2F;&#x2F; request exclusive access to readCount</span><br><span class="line">    &#x2F;&#x2F; &lt;EXIT&gt;</span><br><span class="line">    readCount--;                &#x2F;&#x2F; update count of active readers</span><br><span class="line">    if (readCount &#x3D;&#x3D; 0)         &#x2F;&#x2F; if there are no readers left:</span><br><span class="line">        up(&amp;resourceAccess);     &#x2F;&#x2F; release resource access for all</span><br><span class="line">    &#x2F;&#x2F; &lt;&#x2F;EXIT&gt;</span><br><span class="line">    up(&amp;readCountAccess);        &#x2F;&#x2F; release access to readCount</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs source-c">int readCount;                  &#x2F;&#x2F; init to 0; number of readers currently accessing resource<br><br>&#x2F;&#x2F; all semaphores initialised to 1<br>Semaphore resourceAccess;       &#x2F;&#x2F; controls access (read&#x2F;write) to the resource<br>Semaphore readCountAccess;      &#x2F;&#x2F; for syncing changes to shared variable readCount<br>Semaphore serviceQueue;         &#x2F;&#x2F; FAIRNESS: preserves ordering of requests (signaling must be FIFO)<br><br>void writer()<br>&#123; <br>    down(&amp;serviceQueue);           &#x2F;&#x2F; wait in line to be servicexs<br>    &#x2F;&#x2F; &lt;ENTER&gt;<br>    down(&amp;resourceAccess);         &#x2F;&#x2F; request exclusive access to resource<br>    &#x2F;&#x2F; &lt;&#x2F;ENTER&gt;<br>    up(&amp;serviceQueue);           &#x2F;&#x2F; let next in line be serviced<br><br>    &#x2F;&#x2F; &lt;WRITE&gt;<br>    writeResource();            &#x2F;&#x2F; writing is performed<br>    &#x2F;&#x2F; &lt;&#x2F;WRITE&gt;<br><br>    &#x2F;&#x2F; &lt;EXIT&gt;<br>    up(&amp;resourceAccess);         &#x2F;&#x2F; release resource access for next reader&#x2F;writer<br>    &#x2F;&#x2F; &lt;&#x2F;EXIT&gt;<br>&#125;<br><br>void reader()<br>&#123; <br>    down(&amp;serviceQueue);           &#x2F;&#x2F; wait in line to be serviced<br>    down(&amp;readCountAccess);        &#x2F;&#x2F; request exclusive access to readCount<br>    &#x2F;&#x2F; &lt;ENTER&gt;<br>    if (readCount &#x3D;&#x3D; 0)         &#x2F;&#x2F; if there are no readers already reading:<br>        down(&amp;resourceAccess);     &#x2F;&#x2F; request resource access for readers (writers blocked)<br>    readCount++;                &#x2F;&#x2F; update count of active readers<br>    &#x2F;&#x2F; &lt;&#x2F;ENTER&gt;<br>    up(&amp;serviceQueue);           &#x2F;&#x2F; let next in line be serviced<br>    up(&amp;readCountAccess);        &#x2F;&#x2F; release access to readCount<br><br>    &#x2F;&#x2F; &lt;READ&gt;<br>    readResource();             &#x2F;&#x2F; reading is performed<br>    &#x2F;&#x2F; &lt;&#x2F;READ&gt;<br><br>    down(&amp;readCountAccess);        &#x2F;&#x2F; request exclusive access to readCount<br>    &#x2F;&#x2F; &lt;EXIT&gt;<br>    readCount--;                &#x2F;&#x2F; update count of active readers<br>    if (readCount &#x3D;&#x3D; 0)         &#x2F;&#x2F; if there are no readers left:<br>        up(&amp;resourceAccess);     &#x2F;&#x2F; release resource access for all<br>    &#x2F;&#x2F; &lt;&#x2F;EXIT&gt;<br>    up(&amp;readCountAccess);        &#x2F;&#x2F; release access to readCount<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <h2 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h2><p>进程同步与进程通信很容易混淆，它们的区别在于：</p>
 <ul>
@@ -489,20 +553,20 @@
 </ul>
 <p>进程通信是一种手段，而进程同步是一种目的。也可以说，为了能够达到进程同步的目的，需要让进程进行通信，传输一些进程同步所需要的信息。</p>
 <h3 id="1-管道"><a href="#1-管道" class="headerlink" title="1. 管道"></a>1. 管道</h3><p>管道是通过调用 pipe 函数创建的，fd[0] 用于读，fd[1] 用于写。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pipe</span><span class="params">(<span class="keyword">int</span> fd[<span class="number">2</span>])</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">pipe</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd[<span class="hljs-number">2</span>])</span></span>;<br></code></pre></td></tr></table></figure>
 
 <p>它具有以下限制：</p>
 <ul>
 <li>只支持半双工通信（单向交替传输）；</li>
 <li>只能在父子进程或者兄弟进程中使用。</li>
 </ul>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/53cd9ade-b0a6-4399-b4de-7f1fbd06cdfb.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/53cd9ade-b0a6-4399-b4de-7f1fbd06cdfb.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="2-FIFO"><a href="#2-FIFO" class="headerlink" title="2. FIFO"></a>2. FIFO</h3><p>也称为命名管道，去除了管道只能在父子进程中使用的限制。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkfifo</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">mode_t</span> mode)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkfifoat</span><span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">mode_t</span> mode)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/stat.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mkfifo</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">mode_t</span> mode)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mkfifoat</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">mode_t</span> mode)</span></span>;<br></code></pre></td></tr></table></figure>
 
 <p>FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户进程和服务器进程之间传递数据。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2ac50b81-d92a-4401-b9ec-f2113ecc3076.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2ac50b81-d92a-4401-b9ec-f2113ecc3076.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="3-消息队列"><a href="#3-消息队列" class="headerlink" title="3. 消息队列"></a>3. 消息队列</h3><p>相比于 FIFO，消息队列具有以下优点：</p>
 <ul>
@@ -544,7 +608,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="必要条件"><a href="#必要条件" class="headerlink" title="必要条件"></a>必要条件</h2><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/c037c901-7eae-4e31-a1e4-9d41329e5c3e.png"/> </div><br>
+<h2 id="必要条件"><a href="#必要条件" class="headerlink" title="必要条件"></a>必要条件</h2><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/c037c901-7eae-4e31-a1e4-9d41329e5c3e.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <ul>
 <li>互斥：每个资源要么已经分配给了一个进程，要么就是可用的。</li>
@@ -564,12 +628,12 @@
 <p>当发生死锁时不会对用户造成多大影响，或发生死锁的概率很低，可以采用鸵鸟策略。</p>
 <p>大多数操作系统，包括 Unix，Linux 和 Windows，处理死锁问题的办法仅仅是忽略它。</p>
 <h2 id="死锁检测与死锁恢复"><a href="#死锁检测与死锁恢复" class="headerlink" title="死锁检测与死锁恢复"></a>死锁检测与死锁恢复</h2><p>不试图阻止死锁，而是当检测到死锁发生时，采取措施进行恢复。</p>
-<h3 id="1-每种类型一个资源的死锁检测"><a href="#1-每种类型一个资源的死锁检测" class="headerlink" title="1. 每种类型一个资源的死锁检测"></a>1. 每种类型一个资源的死锁检测</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/b1fa0453-a4b0-4eae-a352-48acca8fff74.png"/> </div><br>
+<h3 id="1-每种类型一个资源的死锁检测"><a href="#1-每种类型一个资源的死锁检测" class="headerlink" title="1. 每种类型一个资源的死锁检测"></a>1. 每种类型一个资源的死锁检测</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/b1fa0453-a4b0-4eae-a352-48acca8fff74.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>上图为资源分配图，其中方框表示资源，圆圈表示进程。资源指向进程表示该资源已经分配给该进程，进程指向资源表示进程请求获取该资源。</p>
 <p>图 a 可以抽取出环，如图 b，它满足了环路等待条件，因此会发生死锁。</p>
 <p>每种类型一个资源的死锁检测算法是通过检测有向图是否存在环来实现，从一个节点出发进行深度优先搜索，对访问过的节点进行标记，如果访问了已经标记的节点，就表示有向图存在环，也就是检测到死锁的发生。</p>
-<h3 id="2-每种类型多个资源的死锁检测"><a href="#2-每种类型多个资源的死锁检测" class="headerlink" title="2. 每种类型多个资源的死锁检测"></a>2. 每种类型多个资源的死锁检测</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png"/> </div><br>
+<h3 id="2-每种类型多个资源的死锁检测"><a href="#2-每种类型多个资源的死锁检测" class="headerlink" title="2. 每种类型多个资源的死锁检测"></a>2. 每种类型多个资源的死锁检测</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>上图中，有三个进程四个资源，每个数据代表的含义如下：</p>
 <ul>
@@ -596,16 +660,16 @@
 <h3 id="2-破坏占有和等待条件"><a href="#2-破坏占有和等待条件" class="headerlink" title="2. 破坏占有和等待条件"></a>2. 破坏占有和等待条件</h3><p>一种实现方式是规定所有进程在开始执行前请求所需要的全部资源。</p>
 <h3 id="3-破坏不可抢占条件"><a href="#3-破坏不可抢占条件" class="headerlink" title="3. 破坏不可抢占条件"></a>3. 破坏不可抢占条件</h3><h3 id="4-破坏环路等待"><a href="#4-破坏环路等待" class="headerlink" title="4. 破坏环路等待"></a>4. 破坏环路等待</h3><p>给资源统一编号，进程只能按编号顺序来请求资源。</p>
 <h2 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h2><p>在程序运行时避免发生死锁。</p>
-<h3 id="1-安全状态"><a href="#1-安全状态" class="headerlink" title="1. 安全状态"></a>1. 安全状态</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ed523051-608f-4c3f-b343-383e2d194470.png"/> </div><br>
+<h3 id="1-安全状态"><a href="#1-安全状态" class="headerlink" title="1. 安全状态"></a>1. 安全状态</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ed523051-608f-4c3f-b343-383e2d194470.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>图 a 的第二列 Has 表示已拥有的资源数，第三列 Max 表示总共需要的资源数，Free 表示还有可以使用的资源数。从图 a 开始出发，先让 B 拥有所需的所有资源（图 b），运行结束后释放 B，此时 Free 变为 5（图 c）；接着以同样的方式运行 C 和 A，使得所有进程都能成功运行，因此可以称图 a 所示的状态时安全的。</p>
 <p>定义：如果没有死锁发生，并且即使所有进程突然请求对资源的最大需求，也仍然存在某种调度次序能够使得每一个进程运行完毕，则称该状态是安全的。</p>
 <p>安全状态的检测与死锁的检测类似，因为安全状态必须要求不能发生死锁。下面的银行家算法与死锁检测算法非常类似，可以结合着做参考对比。</p>
 <h3 id="2-单个资源的银行家算法"><a href="#2-单个资源的银行家算法" class="headerlink" title="2. 单个资源的银行家算法"></a>2. 单个资源的银行家算法</h3><p>一个小城镇的银行家，他向一群客户分别承诺了一定的贷款额度，算法要做的是判断对请求的满足是否会进入不安全状态，如果是，就拒绝请求；否则予以分配。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>上图 c 为不安全状态，因此算法会拒绝之前的请求，从而避免进入图 c 中的状态。</p>
-<h3 id="3-多个资源的银行家算法"><a href="#3-多个资源的银行家算法" class="headerlink" title="3. 多个资源的银行家算法"></a>3. 多个资源的银行家算法</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png"/> </div><br>
+<h3 id="3-多个资源的银行家算法"><a href="#3-多个资源的银行家算法" class="headerlink" title="3. 多个资源的银行家算法"></a>3. 多个资源的银行家算法</h3><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>上图中有五个进程，四个资源。左边的图表示已经分配的资源，右边的图表示还需要分配的资源。最右边的 E、P 以及 A 分别表示：总资源、已分配资源以及可用资源，注意这三个为向量，而不是具体数值，例如 A=(1020)，表示 4 个资源分别还剩下 1/0/2/0。</p>
 <p>检查一个状态是否安全的算法如下：</p>
@@ -639,12 +703,12 @@
 <h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><p>虚拟内存的目的是为了让物理内存扩充成更大的逻辑内存，从而让程序获得更多的可用内存。</p>
 <p>为了更好的管理内存，操作系统将内存抽象成地址空间。每个程序拥有自己的地址空间，这个地址空间被分割成多个块，每一块称为一页。这些页被映射到物理内存，但不需要映射到连续的物理内存，也不需要所有页都必须在物理内存中。当程序引用到不在物理内存中的页时，由硬件执行必要的映射，将缺失的部分装入物理内存并重新执行失败的指令。</p>
 <p>从上面的描述中可以看出，虚拟内存允许程序不用将地址空间中的每一页都映射到物理内存，也就是说一个程序不需要全部调入内存就可以运行，这使得有限的内存运行大程序成为可能。例如有一台计算机可以产生 16 位地址，那么一个程序的地址空间范围是 0~64K。该计算机只有 32KB 的物理内存，虚拟内存技术允许该计算机运行一个 64K 大小的程序。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7b281b1e-0595-402b-ae35-8c91084c33c1.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7b281b1e-0595-402b-ae35-8c91084c33c1.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h2 id="分页系统地址映射"><a href="#分页系统地址映射" class="headerlink" title="分页系统地址映射"></a>分页系统地址映射</h2><p>内存管理单元（MMU）管理着地址空间和物理内存的转换，其中的页表（Page table）存储着页（程序地址空间）和页框（物理内存空间）的映射表。</p>
 <p>一个虚拟地址分成两个部分，一部分存储页面号，一部分存储偏移量。</p>
 <p>下图的页表存放着 16 个页，这 16 个页需要用 4 个比特位来进行索引定位。例如对于虚拟地址（0010 000000000100），前 4 位是存储页面号 2，读取表项内容为（110 1），页表项最后一位表示是否存在于内存中，1 表示存在。后 12 位存储偏移量。这个页对应的页框的地址为 （110 000000000100）。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png" width="500"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png" srcset="/img/loading.gif" lazyload width="500"/> </div><br>
 
 <h2 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h2><p>在程序运行过程中，如果要访问的页面不在内存中，就发生缺页中断从而将该页调入内存中。此时如果内存已无空闲空间，系统必须从内存中调出一个页面到磁盘对换区中来腾出空间。</p>
 <p>页面置换算法和缓存淘汰策略类似，可以将内存看成磁盘的缓存。在缓存系统中，缓存的大小有限，当有新的缓存到达时，需要淘汰一部分已经存在的缓存，这样才有空间存放新的缓存数据。</p>
@@ -655,7 +719,7 @@
 <p>所选择的被换出的页面将是最长时间内不再被访问，通常可以保证获得最低的缺页率。</p>
 <p>是一种理论上的算法，因为无法知道一个页面多长时间不再被访问。</p>
 <p>举例：一个系统为某进程分配了三个物理块，并有如下页面引用序列：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7，0，1，2，0，3，0，4，2，3，0，3，2，1，2，0，1，7，0，1</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html">7，0，1，2，0，3，0，4，2，3，0，3，2，1，2，0，1，7，0，1<br></code></pre></td></tr></table></figure>
 
 <p>开始运行时，先将 7, 0, 1 三个页面装入内存。当进程要访问页面 2 时，产生缺页中断，会将页面 7 换出，因为页面 7 再次被访问的时间最长。</p>
 <h3 id="2-最近最久未使用"><a href="#2-最近最久未使用" class="headerlink" title="2. 最近最久未使用"></a>2. 最近最久未使用</h3><blockquote>
@@ -664,9 +728,9 @@
 <p>虽然无法知道将来要使用的页面情况，但是可以知道过去使用页面的情况。LRU 将最近最久未使用的页面换出。</p>
 <p>为了实现 LRU，需要在内存中维护一个所有页面的链表。当一个页面被访问时，将这个页面移到链表表头。这样就能保证链表表尾的页面是最近最久未访问的。</p>
 <p>因为每次访问都需要更新链表，因此这种方式实现的 LRU 代价很高。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4，7，0，7，1，0，1，2，1，2，6</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html">4，7，0，7，1，0，1，2，1，2，6<br></code></pre></td></tr></table></figure>
 
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/eb859228-c0f2-4bce-910d-d9f76929352b.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/eb859228-c0f2-4bce-910d-d9f76929352b.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="3-最近未使用"><a href="#3-最近未使用" class="headerlink" title="3. 最近未使用"></a>3. 最近未使用</h3><blockquote>
 <p>NRU, Not Recently Used</p>
@@ -687,20 +751,20 @@
 <p>该算法会将那些经常被访问的页面换出，导致缺页率升高。</p>
 <h3 id="5-第二次机会算法"><a href="#5-第二次机会算法" class="headerlink" title="5. 第二次机会算法"></a>5. 第二次机会算法</h3><p>FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问题，对该算法做一个简单的修改：</p>
 <p>当页面被访问 (读或写) 时设置该页面的 R 位为 1。需要替换的时候，检查最老页面的 R 位。如果 R 位是 0，那么这个页面既老又没有被使用，可以立刻置换掉；如果是 1，就将 R 位清 0，并把该页面放到链表的尾端，修改它的装入时间使它就像刚装入的一样，然后继续从链表的头部开始搜索。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ecf8ad5d-5403-48b9-b6e7-f2e20ffe8fca.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ecf8ad5d-5403-48b9-b6e7-f2e20ffe8fca.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="6-时钟"><a href="#6-时钟" class="headerlink" title="6. 时钟"></a>6. 时钟</h3><blockquote>
 <p>Clock</p>
 </blockquote>
 <p>第二次机会算法需要在链表中移动页面，降低了效率。时钟算法使用环形链表将页面连接起来，再使用一个指针指向最老的页面。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/5f5ef0b6-98ea-497c-a007-f6c55288eab1.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/5f5ef0b6-98ea-497c-a007-f6c55288eab1.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h2 id="分段"><a href="#分段" class="headerlink" title="分段"></a>分段</h2><p>虚拟内存采用的是分页技术，也就是将地址空间划分成固定大小的页，每一页再与内存进行映射。</p>
 <p>下图为一个编译器在编译过程中建立的多个表，有 4 个表是动态增长的，如果使用分页系统的一维地址空间，动态增长的特点会导致覆盖问题的出现。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/22de0538-7c6e-4365-bd3b-8ce3c5900216.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/22de0538-7c6e-4365-bd3b-8ce3c5900216.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <p>分段的做法是把每个表分成段，一个段构成一个独立的地址空间。每个段的长度可以不同，并且可以动态增长。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h2 id="段页式"><a href="#段页式" class="headerlink" title="段页式"></a>段页式</h2><p>程序的地址空间划分成多个拥有独立地址空间的段，每个段上的地址空间划分成大小相同的页。这样既拥有分段系统的共享和保护，又拥有分页系统的虚拟内存功能。</p>
 <h2 id="分页与分段的比较"><a href="#分页与分段的比较" class="headerlink" title="分页与分段的比较"></a>分页与分段的比较</h2><ul>
@@ -735,7 +799,7 @@
 <li>制动手臂（Actuator arm）：用于在磁道之间移动磁头；</li>
 <li>主轴（Spindle）：使整个盘面转动。</li>
 </ul>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/014fbc4d-d873-4a12-b160-867ddaed9807.jpg"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/014fbc4d-d873-4a12-b160-867ddaed9807.jpg" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h2 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h2><p>读写一个磁盘块的时间的影响因素有：</p>
 <ul>
@@ -754,7 +818,7 @@
 </blockquote>
 <p>优先调度与当前磁头所在磁道距离最近的磁道。</p>
 <p>虽然平均寻道时间比较低，但是不够公平。如果新到达的磁道请求总是比一个在等待的磁道请求近，那么在等待的磁道请求会一直等待下去，也就是出现饥饿现象。具体来说，两端的磁道请求更容易出现饥饿现象。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/4e2485e4-34bd-4967-9f02-0c093b797aaa.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/4e2485e4-34bd-4967-9f02-0c093b797aaa.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 <h3 id="3-电梯算法"><a href="#3-电梯算法" class="headerlink" title="3. 电梯算法"></a>3. 电梯算法</h3><blockquote>
 <p>SCAN</p>
@@ -762,77 +826,380 @@
 <p>电梯总是保持一个方向运行，直到该方向没有请求为止，然后改变运行方向。</p>
 <p>电梯算法（扫描算法）和电梯的运行过程类似，总是按一个方向来进行磁盘调度，直到该方向上没有未完成的磁盘请求，然后改变方向。</p>
 <p>因为考虑了移动方向，因此所有的磁盘请求都会被满足，解决了 SSTF 的饥饿问题。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/271ce08f-c124-475f-b490-be44fedc6d2e.png"/> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/271ce08f-c124-475f-b490-be44fedc6d2e.png" srcset="/img/loading.gif" lazyload/> </div><br>
 
 
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>操作系统原理</div>
+      <div>http://example.com/2022/01/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/</div>
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2022/01/14/Java%C2%B7%E5%B9%B6%E5%8F%91/" rel="prev" title="Java·并发">
-                  <i class="fa fa-chevron-left"></i> Java·并发
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2022/01/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="next" title="设计模式">
-                  设计模式 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-<script src="/js/comments.js"></script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">AHawkeye</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>AHawkeye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年1月14日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/01/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">设计模式</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/14/Java%E5%9F%BA%E7%A1%80/" title="Java·面经">
+                        <span class="hidden-mobile">Java·面经</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

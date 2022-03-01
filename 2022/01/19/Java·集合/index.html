@@ -1,32 +1,28 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="List接口存储有序的、可重复的数据，可当成动态数组，有三个实现类：  ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储 LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高 Vector(JDK1.0)：作为List接口(JDK1.2)的古老实现类，线程安全，效率">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="AHawkeye">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="List接口存储有序的、可重复的数据，可当成动态数组，有三个实现类：  ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储 LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高 Vector(JDK1.0)：作为List接口(JDK1.2)的古老实现类，线程安全，效率">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java·集合">
 <meta property="og:url" content="http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="SOMETHING">
 <meta property="og:description" content="List接口存储有序的、可重复的数据，可当成动态数组，有三个实现类：  ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储 LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高 Vector(JDK1.0)：作为List接口(JDK1.2)的古老实现类，线程安全，效率">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png">
 <meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118160303082.png">
 <meta property="og:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161038925.png">
@@ -62,176 +58,244 @@
 <meta property="article:published_time" content="2022-01-19T09:09:42.000Z">
 <meta property="article:modified_time" content="2022-01-19T09:10:18.789Z">
 <meta property="article:author" content="AHawkeye">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png">
+  
+  
+  <title>Java·集合 - SOMETHING</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;01&#x2F;19&#x2F;Java%C2%B7%E9%9B%86%E5%90%88&#x2F;&quot;,&quot;path&quot;:&quot;2022&#x2F;01&#x2F;19&#x2F;Java·集合&#x2F;&quot;,&quot;title&quot;:&quot;Java·集合&quot;}</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Java·集合 | SOMETHING</title><script src="/js/config.js"></script>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-    </div>
-  </div>
 
-  <div class="site-meta">
+<body>
+  
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">SOMETHING</h1>
-      <i class="logo-line"></i>
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-
-
-
-
-
-
-</div>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Java·集合"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-01-19 17:09" pubdate>
+          2022年1月19日 下午
+        </time>
+      </span>
+    
   </div>
 
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#List%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">List接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">ArrayList源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jdk7"><span class="nav-number">2.1.</span> <span class="nav-text">jdk7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#add"><span class="nav-number">2.1.2.</span> <span class="nav-text">add</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jdk8"><span class="nav-number">2.2.</span> <span class="nav-text">jdk8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">2.3.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">2.4.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">LinkedList源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8-1"><span class="nav-number">3.1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-1"><span class="nav-number">3.2.</span> <span class="nav-text">add</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">Set接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E6%80%A7%E5%92%8C%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E6%80%A7"><span class="nav-number">4.1.</span> <span class="nav-text">无序性和不可重复性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">4.2.</span> <span class="nav-text">添加元素的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EhashCode%E5%92%8Cequals"><span class="nav-number">4.3.</span> <span class="nav-text">关于hashCode和equals</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E6%B1%82"><span class="nav-number">4.3.1.</span> <span class="nav-text">要求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedHashSet"><span class="nav-number">4.4.</span> <span class="nav-text">LinkedHashSet</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TreeSet"><span class="nav-number">5.</span> <span class="nav-text">TreeSet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">5.1.</span> <span class="nav-text">自然排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">5.2.</span> <span class="nav-text">定制排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set%E7%BB%83%E4%B9%A0"><span class="nav-number">6.</span> <span class="nav-text">Set练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">6.1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">6.2.</span> <span class="nav-text">2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-number">6.2.1.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-number">6.2.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">6.2.3.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map%E6%8E%A5%E5%8F%A3"><span class="nav-number">7.</span> <span class="nav-text">Map接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Map%E7%BB%93%E6%9E%84%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">7.1.</span> <span class="nav-text">Map结构的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#key"><span class="nav-number">7.1.1.</span> <span class="nav-text">key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value"><span class="nav-number">7.1.2.</span> <span class="nav-text">value</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entry"><span class="nav-number">7.1.3.</span> <span class="nav-text">Entry</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">7.2.</span> <span class="nav-text">面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%88%E8%A7%81%E4%B8%8B%EF%BC%89"><span class="nav-number">7.2.1.</span> <span class="nav-text">HashMap的底层实现原理（见下）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap%E5%92%8CHashtable%E7%9A%84%E5%BC%82%E5%90%8C%EF%BC%88%E8%A7%81%E4%B8%8A%EF%BC%89"><span class="nav-number">7.2.2.</span> <span class="nav-text">HashMap和Hashtable的异同（见上）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CurrentHashMap%E4%B8%8EHashtable%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">7.2.3.</span> <span class="nav-text">CurrentHashMap与Hashtable的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK7%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">8.</span> <span class="nav-text">HashMap在JDK7下的底层实现原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK8%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">9.</span> <span class="nav-text">HashMap在JDK8下的底层实现原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK7%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">10.</span> <span class="nav-text">HashMap在JDK7下的底层源码分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap%E5%9C%A8JDK8%E4%B8%8B%E7%9A%84%E5%BA%95%E5%B1%82%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">11.</span> <span class="nav-text">HashMap在JDK8下的底层源码分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedHashMap%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">LinkedHashMap底层实现原理（了解）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%8D%E8%B0%88HashSet"><span class="nav-number">13.</span> <span class="nav-text">再谈HashSet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TreeMap"><span class="nav-number">14.</span> <span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Properties"><span class="nav-number">15.</span> <span class="nav-text">Properties</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collections%E7%B1%BB"><span class="nav-number">16.</span> <span class="nav-text">Collections类</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">AHawkeye</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.5k 字
+        
+      </span>
+    
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          55 分钟
+        
+      </span>
+    
+
+    
+    
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+        
+      </div>
 
-    <div class="main-inner post posts-expand">
+      
+    </div>
+  </div>
+</div>
 
+</div>
 
-  
+  </header>
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="AHawkeye">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SOMETHING">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Java·集合
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
+  <main>
+    
       
 
-      <time title="Created: 2022-01-19 17:09:42 / Modified: 17:10:18" itemprop="dateCreated datePublished" datetime="2022-01-19T17:09:42+08:00">2022-01-19</time>
-    </span>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
 
-  
-</div>
+    </div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h1><p>存储有序的、可重复的数据，可当成动态数组，有三个实现类：</p>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java·集合</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h1><p>存储有序的、可重复的数据，可当成动态数组，有三个实现类：</p>
 <ul>
 <li>ArrayList(JDK1.2)：作为List接口的主要实现类，线程不安全，效率高，底层使用Object[]存储</li>
 <li>LinkedList(JDK1.2)：底层使用双向链表存储，对于频繁的插入，删除操作，使用此类效率比ArrayList高</li>
@@ -258,7 +322,7 @@
 <p>内部声明了Node类型的first和last属性，默认为null</p>
 <h2 id="add-1"><a href="#add-1" class="headerlink" title="add"></a>add</h2><p>将值封装进Node中，创建Node对象</p>
 <p>其中Node定义为，双向链表</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png" alt="image-20220117203913420"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220117203913420.png" srcset="/img/loading.gif" lazyload alt="image-20220117203913420"></p>
 <h1 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h1><p>存储无序的，不可重复的数据</p>
 <ul>
 <li>HashSet：作为Set接口的主要实现类，线程不安全的，可以存储NULL</li>
@@ -279,14 +343,14 @@
 <p>​            |—–如果false，则添加成功——–&gt;情况3</p>
 <p>​            |—–如果true，则添加失败</p>
 <p>对于情况2和3，元素a与已经存在指定索引位置上的数据以链表的方式存储。在jdk7中，元素a放到数组中，指向原来的元素，在jdk8中，原来的元素在数组中，指向元素a，总结为七上八下。</p>
-<h2 id="关于hashCode和equals"><a href="#关于hashCode和equals" class="headerlink" title="关于hashCode和equals"></a>关于hashCode和equals</h2><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118160303082.png" alt="image-20220118160303082"></p>
+<h2 id="关于hashCode和equals"><a href="#关于hashCode和equals" class="headerlink" title="关于hashCode和equals"></a>关于hashCode和equals</h2><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118160303082.png" srcset="/img/loading.gif" lazyload alt="image-20220118160303082"></p>
 <h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul>
 <li>向Set中添加的数据，其所在的类，一定要重写hashCode和euqals方法。</li>
 <li>重写的hashCode和equals方法，尽量保证一致性。即相等的对象一定要有相同的散列码。</li>
 </ul>
 <h2 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h2><p>作为HashSet的子类，在添加数据的同时，每个数据还维护了两个引用，记录此数据前一个数据和后一个数据，对于比较频繁的遍历操作，使用LinkedHashSet效率更高。但是消耗空间。</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161038925.png" alt="image-20220118161038925"></p>
-<h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161906491.png" alt="image-20220118161906491"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161038925.png" srcset="/img/loading.gif" lazyload alt="image-20220118161038925"></p>
+<h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118161906491.png" srcset="/img/loading.gif" lazyload alt="image-20220118161906491"></p>
 <ul>
 <li><p>向TreeSet中添加的数据，要求是相同类的对象。</p>
 </li>
@@ -297,14 +361,14 @@
 <p>TreeSet比较特殊，判断相同不在使用euqals方法，而是使用（重写的）compareTo方法。</p>
 <h2 id="定制排序"><a href="#定制排序" class="headerlink" title="定制排序"></a>定制排序</h2><p>在定制排序中，比较两个对象是否相同的标准为：compare方法返回0</p>
 <p>Comparator放入TreeSet构造器。</p>
-<h1 id="Set练习"><a href="#Set练习" class="headerlink" title="Set练习"></a>Set练习</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118162315734.png" alt="image-20220118162315734"></p>
+<h1 id="Set练习"><a href="#Set练习" class="headerlink" title="Set练习"></a>Set练习</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118162315734.png" srcset="/img/loading.gif" lazyload alt="image-20220118162315734"></p>
 <h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>Person.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> id,String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        Person person = (Person) o;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (id != person.id) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> name != <span class="keyword">null</span> ? name.equals(person.name) : person.name == <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = id;</span><br><span class="line">        result = <span class="number">31</span> * result + (name != <span class="keyword">null</span> ? name.hashCode() : <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> id;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id,String name)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.id = id;<br>    &#125;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Person&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;id=&quot;</span> + id +<br>                <span class="hljs-string">&quot;, name=&#x27;&quot;</span> + name + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span> == o) <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>        <span class="hljs-keyword">if</span> (o == <span class="hljs-keyword">null</span> || getClass() != o.getClass()) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br><br>        Person person = (Person) o;<br><br>        <span class="hljs-keyword">if</span> (id != person.id) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>        <span class="hljs-keyword">return</span> name != <span class="hljs-keyword">null</span> ? name.equals(person.name) : person.name == <span class="hljs-keyword">null</span>;<br>    &#125;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> result = id;<br>        result = <span class="hljs-number">31</span> * result + (name != <span class="hljs-keyword">null</span> ? name.hashCode() : <span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <p>Test.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xzc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person(<span class="number">1001</span>,<span class="string">&quot;AA&quot;</span>);</span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person(<span class="number">1002</span>,<span class="string">&quot;BB&quot;</span>);</span><br><span class="line">        Set&lt;Person&gt; s = <span class="keyword">new</span> HashSet&lt;Person&gt;();</span><br><span class="line">        s.add(p1);</span><br><span class="line">        s.add(p2);</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        p1.name = <span class="string">&quot;CC&quot;</span>;</span><br><span class="line">        s.remove(p1);</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        s.add(<span class="keyword">new</span> Person(<span class="number">1001</span>,<span class="string">&quot;CC&quot;</span>));</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        s.add(<span class="keyword">new</span> Person(<span class="number">1001</span>,<span class="string">&quot;AA&quot;</span>));</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.xzc;<br><br><span class="hljs-keyword">import</span> java.util.HashSet;<br><span class="hljs-keyword">import</span> java.util.Set;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Person p1 = <span class="hljs-keyword">new</span> Person(<span class="hljs-number">1001</span>,<span class="hljs-string">&quot;AA&quot;</span>);<br>        Person p2 = <span class="hljs-keyword">new</span> Person(<span class="hljs-number">1002</span>,<span class="hljs-string">&quot;BB&quot;</span>);<br>        Set&lt;Person&gt; s = <span class="hljs-keyword">new</span> HashSet&lt;Person&gt;();<br>        s.add(p1);<br>        s.add(p2);<br>        System.out.println(s);<br>        p1.name = <span class="hljs-string">&quot;CC&quot;</span>;<br>        s.remove(p1);<br>        System.out.println(s);<br>        s.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-number">1001</span>,<span class="hljs-string">&quot;CC&quot;</span>));<br>        System.out.println(s);<br>        s.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-number">1001</span>,<span class="hljs-string">&quot;AA&quot;</span>));<br>        System.out.println(s);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164046490.png" alt="image-20220118164046490"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164046490.png" srcset="/img/loading.gif" lazyload alt="image-20220118164046490"></p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>1.首先放入了p1和p2</p>
 <p>2.然后把p1的name改为CC，但是存储位置没变。</p>
 <p>3.然后删除p1，此时根据p1的id为1001和name为CC算出hash值，肯定与最初根据1001和AA算出的hash值不同，根据新的name算出的hash值在数组中找，是空的，所以判定p1不存在，不作删除操作，所以还是打印两个元素。</p>
@@ -312,7 +376,7 @@
 <p>5.最后添加属性为1001和AA的人，算出hash值后，发现这个位置有冲突，然后再比较equals，发现一个name是CC，一个name是AA，然后继续添加进去，链表链上。</p>
 <h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>尽量不要修改已经在Set中的对象的属性。</p>
 <h1 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h1><p>和Collection接口并列</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164525257.png" alt="image-20220118164525257"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220118164525257.png" srcset="/img/loading.gif" lazyload alt="image-20220118164525257"></p>
 <ul>
 <li><p>HashMap（JDK1.2）：是Map的主要实现类，线程不安全，效率高，可以存储null的key和value。底层是数组+链表（jdk7及之前）或数组+链表+红黑树（jdk8及之后）。</p>
 </li>
@@ -359,42 +423,42 @@
 <li><p>jdk 7底层结构只有数组+链表，jdk 8底层结构是数组+链表+红黑树。当数组的某一个索引位置上的元素以链表形式存在的数据个数 &gt; 8 且当前数组的长度  &gt;  64时，此时此索引位置上的所有数据改为使用红黑树存储。</p>
 </li>
 </ol>
-<h1 id="HashMap在JDK7下的底层源码分析"><a href="#HashMap在JDK7下的底层源码分析" class="headerlink" title="HashMap在JDK7下的底层源码分析"></a>HashMap在JDK7下的底层源码分析</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119153456075.png" alt="image-20220119153456075"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154258469.png" alt="image-20220119154258469"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163910807.png" alt="image-20220119163910807"></p>
+<h1 id="HashMap在JDK7下的底层源码分析"><a href="#HashMap在JDK7下的底层源码分析" class="headerlink" title="HashMap在JDK7下的底层源码分析"></a>HashMap在JDK7下的底层源码分析</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119153456075.png" srcset="/img/loading.gif" lazyload alt="image-20220119153456075"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154258469.png" srcset="/img/loading.gif" lazyload alt="image-20220119154258469"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163910807.png" srcset="/img/loading.gif" lazyload alt="image-20220119163910807"></p>
 <p>threshold = capacity * loadfactor</p>
 <p>若容量是16，因子是0.75，则阈值为12.则数组在装12个的时候就进行扩容了，而不是全装满扩容，因为你是根据哈希算出来的数组存放位置索引，所以很可能有些位置一直空着。所以搞出一个阈值来保证及时扩容。提前扩容，也是为了让链表结构尽可能的少，所以加载因子可以自己设定，小一些，但是也要兼顾数组利用率，所以0.75最合适。</p>
 <p>put方法下，通过右移，异或操作先算hash值</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154751678.png" alt="image-20220119154751678"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154751678.png" srcset="/img/loading.gif" lazyload alt="image-20220119154751678"></p>
 <p>可以看到这里put，如果存在一个key，则替换后返回oldValue。</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154507806.png" alt="image-20220119154507806"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154507806.png" srcset="/img/loading.gif" lazyload alt="image-20220119154507806"></p>
 <p>可以看到算出hash后用indexFor方法得到存放索引，可以看到是与方法，所以长度为2的幂的原因是只有当length是2的幂的时候，模length和与length-1相同。</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154556019.png" alt="image-20220119154556019"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119154556019.png" srcset="/img/loading.gif" lazyload alt="image-20220119154556019"></p>
 <p>addEntry方法 可以看到超过阈值和要放的地方非空 resize扩容两倍</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119161813893.png" alt="image-20220119161813893"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119161813893.png" srcset="/img/loading.gif" lazyload alt="image-20220119161813893"></p>
 <p>最后添加链表元素</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162034050.png" alt="image-20220119162034050"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162034050.png" srcset="/img/loading.gif" lazyload alt="image-20220119162034050"></p>
 <p>七上八下，新造一个对象，他的next指向原来数组上存的元素，然后新造的对象存入数组，就是链表的头插法。</p>
 <h1 id="HashMap在JDK8下的底层源码分析"><a href="#HashMap在JDK8下的底层源码分析" class="headerlink" title="HashMap在JDK8下的底层源码分析"></a>HashMap在JDK8下的底层源码分析</h1><p>首先声明对象时 底层构造器并没有创建数组，只是赋值加载因子</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162344281.png" alt="image-20220119162344281"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162344281.png" srcset="/img/loading.gif" lazyload alt="image-20220119162344281"></p>
 <p>其次Node本质上还是一个Entry</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162438190.png" alt="image-20220119162438190"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162438190.png" srcset="/img/loading.gif" lazyload alt="image-20220119162438190"></p>
 <p>然后是put方法</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162453389.png" alt="image-20220119162453389"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119162453389.png" srcset="/img/loading.gif" lazyload alt="image-20220119162453389"></p>
 <p>重点是putVal</p>
 <p>首次put，就造好Node类型数组。</p>
 <p>如果不考虑红黑树，逻辑与jdk7的区别就是尾插。</p>
 <p>当某一链表元素超过8（TREEIFY_THRESHOLD）时，变成树结构</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163640916.png" alt="image-20220119163640916"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163640916.png" srcset="/img/loading.gif" lazyload alt="image-20220119163640916"></p>
 <p>而且在方法内部，当数组长度小于64，只是resize扩容，也不变树结构</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163844759.png" alt="image-20220119163844759"></p>
-<h1 id="LinkedHashMap底层实现原理（了解）"><a href="#LinkedHashMap底层实现原理（了解）" class="headerlink" title="LinkedHashMap底层实现原理（了解）"></a>LinkedHashMap底层实现原理（了解）</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164453922.png" alt="image-20220119164453922"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119163844759.png" srcset="/img/loading.gif" lazyload alt="image-20220119163844759"></p>
+<h1 id="LinkedHashMap底层实现原理（了解）"><a href="#LinkedHashMap底层实现原理（了解）" class="headerlink" title="LinkedHashMap底层实现原理（了解）"></a>LinkedHashMap底层实现原理（了解）</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164453922.png" srcset="/img/loading.gif" lazyload alt="image-20220119164453922"></p>
 <h1 id="再谈HashSet"><a href="#再谈HashSet" class="headerlink" title="再谈HashSet"></a>再谈HashSet</h1><p>从构造器看，new一个HashSet，其实就是new出HashMap</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164736925.png" alt="image-20220119164736925"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164736925.png" srcset="/img/loading.gif" lazyload alt="image-20220119164736925"></p>
 <p>往set中add元素，就是往map里放元素，放入key</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164802403.png" alt="image-20220119164802403"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164802403.png" srcset="/img/loading.gif" lazyload alt="image-20220119164802403"></p>
 <p>其value对应一个PRESENT，不声明为null，避免或许会有的空指针异常。其实是一个空的Object类，没有实际意义，所以声明为静态的，就这一个，对每一个key都指向这一个value，节省空间。</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164650013.png" alt="image-20220119164650013"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119164650013.png" srcset="/img/loading.gif" lazyload alt="image-20220119164650013"></p>
 <h1 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h1><ul>
 <li><p>向TreeMap中添加的数据key-value，要求key是相同类的对象。</p>
 </li>
@@ -403,80 +467,380 @@
 </ul>
 <p>注意自然排序就是让key的类实现Comparable接口</p>
 <p>定制排序，将Comparator放入TreeMap的构造器</p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165222242.png" alt="image-20220119165222242"></p>
-<h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165410740.png" alt="image-20220119165410740"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165629368.png" alt="image-20220119165629368"></p>
-<h1 id="Collections类"><a href="#Collections类" class="headerlink" title="Collections类"></a>Collections类</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165700997.png" alt="image-20220119165700997"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165726576.png" alt="image-20220119165726576"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165920145.png" alt="image-20220119165920145"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170040288.png" alt="image-20220119170040288"></p>
-<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170134182.png" alt="image-20220119170134182"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165222242.png" srcset="/img/loading.gif" lazyload alt="image-20220119165222242"></p>
+<h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165410740.png" srcset="/img/loading.gif" lazyload alt="image-20220119165410740"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165629368.png" srcset="/img/loading.gif" lazyload alt="image-20220119165629368"></p>
+<h1 id="Collections类"><a href="#Collections类" class="headerlink" title="Collections类"></a>Collections类</h1><p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165700997.png" srcset="/img/loading.gif" lazyload alt="image-20220119165700997"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165726576.png" srcset="/img/loading.gif" lazyload alt="image-20220119165726576"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119165920145.png" srcset="/img/loading.gif" lazyload alt="image-20220119165920145"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170040288.png" srcset="/img/loading.gif" lazyload alt="image-20220119170040288"></p>
+<p><img src="https://gitee.com/ahawkeye/blogpic/raw/master/Java/JavaCollection.assets/image-20220119170134182.png" srcset="/img/loading.gif" lazyload alt="image-20220119170134182"></p>
 
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Java·集合</div>
+      <div>http://example.com/2022/01/19/Java%C2%B7%E9%9B%86%E5%90%88/</div>
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2022/01/16/VueBlog/" rel="prev" title="VueBlog开发笔记">
-                  <i class="fa fa-chevron-left"></i> VueBlog开发笔记
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-<script src="/js/comments.js"></script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">AHawkeye</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>AHawkeye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年1月19日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/16/VueBlog/" title="VueBlog开发笔记">
+                        <span class="hidden-mobile">VueBlog开发笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
