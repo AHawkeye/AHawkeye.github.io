@@ -24,8 +24,10 @@
 <meta property="og:description" content="二分 二分查找是最经典的算法之一，以其极低的时间复杂度(O(logn))闻名于世。主要有三种，在有序数组中查找是否存在目标，并返回下标，第一个下标，最后一个下标。注意边界处理。以及mid &#x3D; l + ((r - l) &gt;&gt; 1)优化。  123456789101112131415161718192021222324252627282930313233343536373839404142">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-02T08:59:34.000Z">
-<meta property="article:modified_time" content="2022-03-02T08:59:38.475Z">
+<meta property="article:modified_time" content="2022-03-02T09:06:00.254Z">
 <meta property="article:author" content="AHawkeye">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -290,7 +292,7 @@
 <p>借助堆这种数据结构进行排序称为堆排序，可大致分解为建堆和排序两个过程。</p>
 </blockquote>
 <h3 id="建堆-1"><a href="#建堆-1" class="headerlink" title="建堆"></a>建堆</h3><blockquote>
-<p><strong>从后往前</strong>处理数组，并且堆每个数据执行<strong>自上而下的堆化</strong>。因为叶子节点不需要堆化，对于完全二叉树，下标n/2+1<del>n的节点都是叶子节点，所以只需要对下标n/2</del>1的数据进行依次进行自上而下的堆化/</p>
+<p><strong>从后往前</strong>处理数组，并且堆每个数据执行<strong>自上而下的堆化</strong>。因为叶子节点不需要堆化，对于完全二叉树，下标n/2+1到n的节点都是叶子节点，所以只需要对下标n/2到1的数据进行依次进行自上而下的堆化</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildHeap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n)</span> </span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = n / <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">1</span>; i--) &#123;<br>            heapify(a, n, i);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> temp = a[i];<br>        a[i] = a[j];<br>        a[j] = temp;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">heapify</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) &#123;<br>            <span class="hljs-comment">// 找出左右孩子哪个最大，然后互换位置</span><br>            <span class="hljs-keyword">int</span> maxPos = i;<br>            <span class="hljs-comment">// 有左孩子并且父小于左孩子 并取最大值的下标存入maxPos</span><br>            <span class="hljs-keyword">if</span> (i * <span class="hljs-number">2</span> &lt;= n &amp;&amp; a[i] &lt; a[i * <span class="hljs-number">2</span>]) maxPos = i * <span class="hljs-number">2</span>;<br>            <span class="hljs-comment">// 有右孩子并且父和左孩子的最大值小于右孩子</span><br>            <span class="hljs-keyword">if</span> (i * <span class="hljs-number">2</span> + <span class="hljs-number">1</span> &lt;= n &amp;&amp; a[maxPos] &lt; a[i * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>]) maxPos = i * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>;<br>            <span class="hljs-comment">// 父亲比左右节点都大 说明此时已经是堆了</span><br>            <span class="hljs-keyword">if</span> (maxPos == i) <span class="hljs-keyword">break</span>;<br>            swap(a, i, maxPos);<br>            <span class="hljs-comment">// 进入下一次循环</span><br>            i = maxPos;<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
 
@@ -340,6 +342,15 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/java/">#java</a>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+      
+    </div>
   
 </div>
 
